@@ -1,0 +1,1768 @@
+测试执行时间: 2026-06-04 18:38:28
+测试文件: /Users/mac/AI/api-automation/testcases/test_page_query_on_job.py
+============================================================
+
+============================= test session starts ==============================
+platform darwin -- Python 3.11.15, pytest-7.4.4, pluggy-1.6.0 -- /Users/mac/.pyenv/versions/3.11.15/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.15', 'Platform': 'macOS-14.6.1-x86_64-i386-64bit', 'Packages': {'pytest': '7.4.4', 'pluggy': '1.6.0'}, 'Plugins': {'locust': '2.44.0', 'html': '4.1.1', 'metadata': '3.1.1', 'Faker': '22.5.1', 'allure-pytest': '2.13.2', 'anyio': '4.13.0'}}
+rootdir: /Users/mac/AI/api-automation
+configfile: pytest.ini
+plugins: locust-2.44.0, html-4.1.1, metadata-3.1.1, Faker-22.5.1, allure-pytest-2.13.2, anyio-4.13.0
+collecting ... collected 7 items
+
+testcases/test_page_query_on_job.py::TestPageQueryOnJob::test_data_driven[PAGE_QUERY_ON_JOB_001] 
+-------------------------------- live log call ---------------------------------
+18:38:27 [INFO] ==================================================
+18:38:27 [INFO] 执行用例: [PAGE_QUERY_ON_JOB_001] 正常请求-使用原始参数
+18:38:27 [INFO] ============================================================
+18:38:27 [INFO] 请求方法: POST
+18:38:27 [INFO] 请求URL: https://yupao-test-backend.yupaowang.com/scrm/v1/orgStaff/pageQueryOnJob
+18:38:27 [INFO] 请求体: {"staffName": "", "currentPage": 1, "pageSize": 10, "orgId": "179", "tenantId": 2}
+18:38:27 [INFO] 响应状态码: 200
+18:38:27 [INFO] 响应体: {
+  "code": 0,
+  "message": "请求成功",
+  "askId": "b2b8ed942ef4419a85b377cb5719154c",
+  "data": {
+    "data": [
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "e3bd589e",
+        "staffName": "张彤",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00ee_96710a86-01d8-4849-8c43-e968c6b442dg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "133********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          },
+          {
+            "orgId": 212,
+            "orgName": "效能服务事业部",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "e64eb1c2",
+        "staffName": "邵玉凤",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_005c_32f75905-7960-432e-b3ed-f106d2e1534g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "177********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "1b1a57e3",
+        "staffName": "向全超",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0096_0c554365-8414-4fef-938e-e29a5361e98g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "151********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 268,
+            "orgName": "凌云团",
+            "master": false
+          },
+          {
+            "orgId": 214,
+            "orgName": "微服务客户组",
+            "master": true
+          },
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": false
+          },
+          {
+            "orgId": 282,
+            "orgName": "yp-m",
+            "master": false
+          },
+          {
+            "orgId": 309,
+            "orgName": "鱼泡大学",
+            "master": false
+          },
+          {
+            "orgId": 332,
+            "orgName": "质量保障部",
+            "master": false
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          },
+          {
+            "orgId": 191,
+            "orgName": "1-1",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "81g837eb",
+        "staffName": "罗玉林",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00qc_eac1d995-393b-4500-b7a7-02f1f040f5bg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "151********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": true
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "272bffb6",
+        "staffName": "田丹",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00nj_b514b393-2088-4bf3-a148-76dca2bf7bfg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "159********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "18gc4c15",
+        "staffName": "罗莉",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_3da79ba2-481e-4ae9-8c9f-a5aa116fe86g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "132********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 282,
+            "orgName": "yp-m",
+            "master": true
+          },
+          {
+            "orgId": 332,
+            "orgName": "质量保障部",
+            "master": false
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "9bbe942e",
+        "staffName": "周洪建",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/a673470e-9ab0-4aea-babe-8fbc5d79352g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "156********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "a9c9aae1",
+        "staffName": "田原",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00u3_3abb2aea-3076-4988-8496-335e87befccg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "189********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "da3ac256",
+        "staffName": "李鑫",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00te_828c2531-1f7a-44bb-a91e-5af27091195g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "191********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": true
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "95a179b9",
+        "staffName": "张哲",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0011g_86aff570-7d2e-4b15-814c-a49dc6b21ddg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "177********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": false
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      }
+    ],
+    "paginator": {
+      "currentPage": 1,
+      "pageSize": 10,
+      "totalRecord": 10,
+      "totalPage": 1,
+      "orderSegment": null
+    }
+  },
+  "error": false
+}
+18:38:27 [INFO] ============================================================
+18:38:27 [INFO] ✓ 状态码断言通过: 200
+18:38:27 [INFO] 用例 [PAGE_QUERY_ON_JOB_001] 执行完成, 响应码: 200
+PASSED                                                                   [ 14%]
+testcases/test_page_query_on_job.py::TestPageQueryOnJob::test_data_driven[PAGE_QUERY_ON_JOB_002] 
+-------------------------------- live log call ---------------------------------
+18:38:27 [INFO] ==================================================
+18:38:27 [INFO] 执行用例: [PAGE_QUERY_ON_JOB_002] 异常-空请求体
+18:38:27 [INFO] ============================================================
+18:38:27 [INFO] 请求方法: POST
+18:38:27 [INFO] 请求URL: https://yupao-test-backend.yupaowang.com/scrm/v1/orgStaff/pageQueryOnJob
+18:38:27 [INFO] 响应状态码: 200
+18:38:27 [INFO] 响应体: {
+  "code": 0,
+  "message": "请求成功",
+  "askId": "aed3425350f04d3ebff13219ed2d213d",
+  "data": {
+    "data": [],
+    "paginator": {
+      "currentPage": 1,
+      "pageSize": 50,
+      "totalRecord": null,
+      "totalPage": null,
+      "orderSegment": null
+    }
+  },
+  "error": false
+}
+18:38:27 [INFO] ============================================================
+18:38:27 [INFO] ✓ 状态码断言通过: 200
+18:38:27 [INFO] 用例 [PAGE_QUERY_ON_JOB_002] 执行完成, 响应码: 200
+PASSED                                                                   [ 28%]
+testcases/test_page_query_on_job.py::TestPageQueryOnJob::test_data_driven[PAGE_QUERY_ON_JOB_003] 
+-------------------------------- live log call ---------------------------------
+18:38:27 [INFO] ==================================================
+18:38:27 [INFO] 执行用例: [PAGE_QUERY_ON_JOB_003] 异常-缺少字段staffName
+18:38:27 [INFO] ============================================================
+18:38:27 [INFO] 请求方法: POST
+18:38:27 [INFO] 请求URL: https://yupao-test-backend.yupaowang.com/scrm/v1/orgStaff/pageQueryOnJob
+18:38:27 [INFO] 请求体: {"currentPage": 1, "pageSize": 10, "orgId": "179", "tenantId": 2}
+18:38:27 [INFO] 响应状态码: 200
+18:38:27 [INFO] 响应体: {
+  "code": 0,
+  "message": "请求成功",
+  "askId": "ffdd2adafcfb460ba503be3e63381e65",
+  "data": {
+    "data": [
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "e3bd589e",
+        "staffName": "张彤",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00ee_96710a86-01d8-4849-8c43-e968c6b442dg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "133********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          },
+          {
+            "orgId": 212,
+            "orgName": "效能服务事业部",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "e64eb1c2",
+        "staffName": "邵玉凤",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_005c_32f75905-7960-432e-b3ed-f106d2e1534g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "177********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "1b1a57e3",
+        "staffName": "向全超",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0096_0c554365-8414-4fef-938e-e29a5361e98g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "151********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 268,
+            "orgName": "凌云团",
+            "master": false
+          },
+          {
+            "orgId": 214,
+            "orgName": "微服务客户组",
+            "master": true
+          },
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": false
+          },
+          {
+            "orgId": 282,
+            "orgName": "yp-m",
+            "master": false
+          },
+          {
+            "orgId": 309,
+            "orgName": "鱼泡大学",
+            "master": false
+          },
+          {
+            "orgId": 332,
+            "orgName": "质量保障部",
+            "master": false
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          },
+          {
+            "orgId": 191,
+            "orgName": "1-1",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "81g837eb",
+        "staffName": "罗玉林",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00qc_eac1d995-393b-4500-b7a7-02f1f040f5bg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "151********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": true
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "272bffb6",
+        "staffName": "田丹",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00nj_b514b393-2088-4bf3-a148-76dca2bf7bfg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "159********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "18gc4c15",
+        "staffName": "罗莉",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_3da79ba2-481e-4ae9-8c9f-a5aa116fe86g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "132********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 282,
+            "orgName": "yp-m",
+            "master": true
+          },
+          {
+            "orgId": 332,
+            "orgName": "质量保障部",
+            "master": false
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "9bbe942e",
+        "staffName": "周洪建",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/a673470e-9ab0-4aea-babe-8fbc5d79352g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "156********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "a9c9aae1",
+        "staffName": "田原",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00u3_3abb2aea-3076-4988-8496-335e87befccg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "189********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "da3ac256",
+        "staffName": "李鑫",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00te_828c2531-1f7a-44bb-a91e-5af27091195g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "191********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": true
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "95a179b9",
+        "staffName": "张哲",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0011g_86aff570-7d2e-4b15-814c-a49dc6b21ddg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "177********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": false
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      }
+    ],
+    "paginator": {
+      "currentPage": 1,
+      "pageSize": 10,
+      "totalRecord": 10,
+      "totalPage": 1,
+      "orderSegment": null
+    }
+  },
+  "error": false
+}
+18:38:27 [INFO] ============================================================
+18:38:27 [INFO] ✓ 状态码断言通过: 200
+18:38:27 [INFO] 用例 [PAGE_QUERY_ON_JOB_003] 执行完成, 响应码: 200
+PASSED                                                                   [ 42%]
+testcases/test_page_query_on_job.py::TestPageQueryOnJob::test_data_driven[PAGE_QUERY_ON_JOB_004] 
+-------------------------------- live log call ---------------------------------
+18:38:27 [INFO] ==================================================
+18:38:27 [INFO] 执行用例: [PAGE_QUERY_ON_JOB_004] 异常-缺少字段currentPage
+18:38:27 [INFO] ============================================================
+18:38:27 [INFO] 请求方法: POST
+18:38:27 [INFO] 请求URL: https://yupao-test-backend.yupaowang.com/scrm/v1/orgStaff/pageQueryOnJob
+18:38:27 [INFO] 请求体: {"staffName": "", "pageSize": 10, "orgId": "179", "tenantId": 2}
+18:38:27 [INFO] 响应状态码: 200
+18:38:27 [INFO] 响应体: {
+  "code": 0,
+  "message": "请求成功",
+  "askId": "f1dbe93b78bd4ea8832faa4cb8d78017",
+  "data": {
+    "data": [
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "e3bd589e",
+        "staffName": "张彤",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00ee_96710a86-01d8-4849-8c43-e968c6b442dg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "133********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          },
+          {
+            "orgId": 212,
+            "orgName": "效能服务事业部",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "e64eb1c2",
+        "staffName": "邵玉凤",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_005c_32f75905-7960-432e-b3ed-f106d2e1534g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "177********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "1b1a57e3",
+        "staffName": "向全超",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0096_0c554365-8414-4fef-938e-e29a5361e98g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "151********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 268,
+            "orgName": "凌云团",
+            "master": false
+          },
+          {
+            "orgId": 214,
+            "orgName": "微服务客户组",
+            "master": true
+          },
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": false
+          },
+          {
+            "orgId": 282,
+            "orgName": "yp-m",
+            "master": false
+          },
+          {
+            "orgId": 309,
+            "orgName": "鱼泡大学",
+            "master": false
+          },
+          {
+            "orgId": 332,
+            "orgName": "质量保障部",
+            "master": false
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          },
+          {
+            "orgId": 191,
+            "orgName": "1-1",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "81g837eb",
+        "staffName": "罗玉林",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00qc_eac1d995-393b-4500-b7a7-02f1f040f5bg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "151********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": true
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "272bffb6",
+        "staffName": "田丹",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00nj_b514b393-2088-4bf3-a148-76dca2bf7bfg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "159********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "18gc4c15",
+        "staffName": "罗莉",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_3da79ba2-481e-4ae9-8c9f-a5aa116fe86g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "132********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 282,
+            "orgName": "yp-m",
+            "master": true
+          },
+          {
+            "orgId": 332,
+            "orgName": "质量保障部",
+            "master": false
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "9bbe942e",
+        "staffName": "周洪建",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/a673470e-9ab0-4aea-babe-8fbc5d79352g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "156********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "a9c9aae1",
+        "staffName": "田原",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00u3_3abb2aea-3076-4988-8496-335e87befccg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "189********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "da3ac256",
+        "staffName": "李鑫",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00te_828c2531-1f7a-44bb-a91e-5af27091195g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "191********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": true
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "95a179b9",
+        "staffName": "张哲",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0011g_86aff570-7d2e-4b15-814c-a49dc6b21ddg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "177********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": false
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      }
+    ],
+    "paginator": {
+      "currentPage": 1,
+      "pageSize": 10,
+      "totalRecord": 10,
+      "totalPage": 1,
+      "orderSegment": null
+    }
+  },
+  "error": false
+}
+18:38:27 [INFO] ============================================================
+18:38:27 [INFO] ✓ 状态码断言通过: 200
+18:38:27 [INFO] 用例 [PAGE_QUERY_ON_JOB_004] 执行完成, 响应码: 200
+PASSED                                                                   [ 57%]
+testcases/test_page_query_on_job.py::TestPageQueryOnJob::test_data_driven[PAGE_QUERY_ON_JOB_005] 
+-------------------------------- live log call ---------------------------------
+18:38:27 [INFO] ==================================================
+18:38:27 [INFO] 执行用例: [PAGE_QUERY_ON_JOB_005] 异常-缺少字段pageSize
+18:38:27 [INFO] ============================================================
+18:38:27 [INFO] 请求方法: POST
+18:38:27 [INFO] 请求URL: https://yupao-test-backend.yupaowang.com/scrm/v1/orgStaff/pageQueryOnJob
+18:38:27 [INFO] 请求体: {"staffName": "", "currentPage": 1, "orgId": "179", "tenantId": 2}
+18:38:27 [INFO] 响应状态码: 200
+18:38:27 [INFO] 响应体: {
+  "code": 0,
+  "message": "请求成功",
+  "askId": "b4e37313a20e4206ae11237666b383ce",
+  "data": {
+    "data": [
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "e3bd589e",
+        "staffName": "张彤",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00ee_96710a86-01d8-4849-8c43-e968c6b442dg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "133********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          },
+          {
+            "orgId": 212,
+            "orgName": "效能服务事业部",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "e64eb1c2",
+        "staffName": "邵玉凤",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_005c_32f75905-7960-432e-b3ed-f106d2e1534g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "177********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "1b1a57e3",
+        "staffName": "向全超",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0096_0c554365-8414-4fef-938e-e29a5361e98g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "151********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 268,
+            "orgName": "凌云团",
+            "master": false
+          },
+          {
+            "orgId": 214,
+            "orgName": "微服务客户组",
+            "master": true
+          },
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": false
+          },
+          {
+            "orgId": 282,
+            "orgName": "yp-m",
+            "master": false
+          },
+          {
+            "orgId": 309,
+            "orgName": "鱼泡大学",
+            "master": false
+          },
+          {
+            "orgId": 332,
+            "orgName": "质量保障部",
+            "master": false
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          },
+          {
+            "orgId": 191,
+            "orgName": "1-1",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "81g837eb",
+        "staffName": "罗玉林",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00qc_eac1d995-393b-4500-b7a7-02f1f040f5bg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "151********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": true
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "272bffb6",
+        "staffName": "田丹",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00nj_b514b393-2088-4bf3-a148-76dca2bf7bfg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "159********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "18gc4c15",
+        "staffName": "罗莉",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_3da79ba2-481e-4ae9-8c9f-a5aa116fe86g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "132********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 282,
+            "orgName": "yp-m",
+            "master": true
+          },
+          {
+            "orgId": 332,
+            "orgName": "质量保障部",
+            "master": false
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "9bbe942e",
+        "staffName": "周洪建",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/a673470e-9ab0-4aea-babe-8fbc5d79352g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "156********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "a9c9aae1",
+        "staffName": "田原",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00u3_3abb2aea-3076-4988-8496-335e87befccg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "189********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "da3ac256",
+        "staffName": "李鑫",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00te_828c2531-1f7a-44bb-a91e-5af27091195g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "191********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": true
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "95a179b9",
+        "staffName": "张哲",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0011g_86aff570-7d2e-4b15-814c-a49dc6b21ddg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "177********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": false
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      }
+    ],
+    "paginator": {
+      "currentPage": 1,
+      "pageSize": 50,
+      "totalRecord": 10,
+      "totalPage": 1,
+      "orderSegment": null
+    }
+  },
+  "error": false
+}
+18:38:27 [INFO] ============================================================
+18:38:27 [INFO] ✓ 状态码断言通过: 200
+18:38:27 [INFO] 用例 [PAGE_QUERY_ON_JOB_005] 执行完成, 响应码: 200
+PASSED                                                                   [ 71%]
+testcases/test_page_query_on_job.py::TestPageQueryOnJob::test_data_driven[PAGE_QUERY_ON_JOB_NO_AUTH] 
+-------------------------------- live log call ---------------------------------
+18:38:27 [INFO] ==================================================
+18:38:27 [INFO] 执行用例: [PAGE_QUERY_ON_JOB_NO_AUTH] 异常-未携带认证信息
+18:38:27 [INFO] ============================================================
+18:38:27 [INFO] 请求方法: POST
+18:38:27 [INFO] 请求URL: https://yupao-test-backend.yupaowang.com/scrm/v1/orgStaff/pageQueryOnJob
+18:38:27 [INFO] 请求体: {"staffName": "", "currentPage": 1, "pageSize": 10, "orgId": "179", "tenantId": 2}
+18:38:28 [INFO] 响应状态码: 200
+18:38:28 [INFO] 响应体: {
+  "code": 0,
+  "message": "请求成功",
+  "askId": "c8cd3e32553a4b5c9edbfc2ad57cbd8e",
+  "data": {
+    "data": [
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "e3bd589e",
+        "staffName": "张彤",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00ee_96710a86-01d8-4849-8c43-e968c6b442dg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "133********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          },
+          {
+            "orgId": 212,
+            "orgName": "效能服务事业部",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "e64eb1c2",
+        "staffName": "邵玉凤",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_005c_32f75905-7960-432e-b3ed-f106d2e1534g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "177********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "1b1a57e3",
+        "staffName": "向全超",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0096_0c554365-8414-4fef-938e-e29a5361e98g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "151********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 268,
+            "orgName": "凌云团",
+            "master": false
+          },
+          {
+            "orgId": 214,
+            "orgName": "微服务客户组",
+            "master": true
+          },
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": false
+          },
+          {
+            "orgId": 282,
+            "orgName": "yp-m",
+            "master": false
+          },
+          {
+            "orgId": 309,
+            "orgName": "鱼泡大学",
+            "master": false
+          },
+          {
+            "orgId": 332,
+            "orgName": "质量保障部",
+            "master": false
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          },
+          {
+            "orgId": 191,
+            "orgName": "1-1",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "81g837eb",
+        "staffName": "罗玉林",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00qc_eac1d995-393b-4500-b7a7-02f1f040f5bg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "151********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": true
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "272bffb6",
+        "staffName": "田丹",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00nj_b514b393-2088-4bf3-a148-76dca2bf7bfg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "159********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "18gc4c15",
+        "staffName": "罗莉",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_3da79ba2-481e-4ae9-8c9f-a5aa116fe86g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "132********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 282,
+            "orgName": "yp-m",
+            "master": true
+          },
+          {
+            "orgId": 332,
+            "orgName": "质量保障部",
+            "master": false
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "9bbe942e",
+        "staffName": "周洪建",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/a673470e-9ab0-4aea-babe-8fbc5d79352g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "156********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "a9c9aae1",
+        "staffName": "田原",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00u3_3abb2aea-3076-4988-8496-335e87befccg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "189********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "da3ac256",
+        "staffName": "李鑫",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00te_828c2531-1f7a-44bb-a91e-5af27091195g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "191********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": true
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "95a179b9",
+        "staffName": "张哲",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0011g_86aff570-7d2e-4b15-814c-a49dc6b21ddg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "177********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": false
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      }
+    ],
+    "paginator": {
+      "currentPage": 1,
+      "pageSize": 10,
+      "totalRecord": 10,
+      "totalPage": 1,
+      "orderSegment": null
+    }
+  },
+  "error": false
+}
+18:38:28 [INFO] ============================================================
+18:38:28 [INFO] ✓ 状态码断言通过: 200
+18:38:28 [INFO] 用例 [PAGE_QUERY_ON_JOB_NO_AUTH] 执行完成, 响应码: 200
+PASSED                                                                   [ 85%]
+testcases/test_page_query_on_job.py::TestPageQueryOnJob::test_response_time 
+-------------------------------- live log call ---------------------------------
+18:38:28 [INFO] ============================================================
+18:38:28 [INFO] 请求方法: POST
+18:38:28 [INFO] 请求URL: https://yupao-test-backend.yupaowang.com/scrm/v1/orgStaff/pageQueryOnJob
+18:38:28 [INFO] 请求体: {"staffName": "", "currentPage": 1, "pageSize": 10, "orgId": "179", "tenantId": 2}
+18:38:28 [INFO] 响应状态码: 200
+18:38:28 [INFO] 响应体: {
+  "code": 0,
+  "message": "请求成功",
+  "askId": "b672b3345d774505ae364b46cf882138",
+  "data": {
+    "data": [
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "e3bd589e",
+        "staffName": "张彤",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00ee_96710a86-01d8-4849-8c43-e968c6b442dg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "133********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          },
+          {
+            "orgId": 212,
+            "orgName": "效能服务事业部",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "e64eb1c2",
+        "staffName": "邵玉凤",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_005c_32f75905-7960-432e-b3ed-f106d2e1534g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "177********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "1b1a57e3",
+        "staffName": "向全超",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0096_0c554365-8414-4fef-938e-e29a5361e98g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "151********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 268,
+            "orgName": "凌云团",
+            "master": false
+          },
+          {
+            "orgId": 214,
+            "orgName": "微服务客户组",
+            "master": true
+          },
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": false
+          },
+          {
+            "orgId": 282,
+            "orgName": "yp-m",
+            "master": false
+          },
+          {
+            "orgId": 309,
+            "orgName": "鱼泡大学",
+            "master": false
+          },
+          {
+            "orgId": 332,
+            "orgName": "质量保障部",
+            "master": false
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          },
+          {
+            "orgId": 191,
+            "orgName": "1-1",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "81g837eb",
+        "staffName": "罗玉林",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00qc_eac1d995-393b-4500-b7a7-02f1f040f5bg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "151********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": true
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "272bffb6",
+        "staffName": "田丹",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00nj_b514b393-2088-4bf3-a148-76dca2bf7bfg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "159********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "18gc4c15",
+        "staffName": "罗莉",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_3da79ba2-481e-4ae9-8c9f-a5aa116fe86g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "132********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 282,
+            "orgName": "yp-m",
+            "master": true
+          },
+          {
+            "orgId": 332,
+            "orgName": "质量保障部",
+            "master": false
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "9bbe942e",
+        "staffName": "周洪建",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/a673470e-9ab0-4aea-babe-8fbc5d79352g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "156********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "a9c9aae1",
+        "staffName": "田原",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00u3_3abb2aea-3076-4988-8496-335e87befccg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "189********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "da3ac256",
+        "staffName": "李鑫",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00te_828c2531-1f7a-44bb-a91e-5af27091195g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "191********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": true
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": false
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      },
+      {
+        "id": null,
+        "orgId": null,
+        "fsId": "95a179b9",
+        "staffName": "张哲",
+        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0011g_86aff570-7d2e-4b15-814c-a49dc6b21ddg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",
+        "mobileMask": "177********",
+        "employeeStatusType": 1,
+        "position": null,
+        "orgs": [
+          {
+            "orgId": 190,
+            "orgName": "测试哈哈哈哈",
+            "master": false
+          },
+          {
+            "orgId": 179,
+            "orgName": "定向任务分配测试",
+            "master": true
+          }
+        ],
+        "email": null,
+        "nameEnglish": null
+      }
+    ],
+    "paginator": {
+      "currentPage": 1,
+      "pageSize": 10,
+      "totalRecord": 10,
+      "totalPage": 1,
+      "orderSegment": null
+    }
+  },
+  "error": false
+}
+18:38:28 [INFO] ============================================================
+18:38:28 [INFO] ✓ 响应时间断言通过: 105ms <= 5000ms
+PASSED                                                                   [100%]
+
+- generated xml file: /Users/mac/AI/api-automation/reports/result_20260604_183826.xml -
+============================== 7 passed in 1.05s ===============================
+
+2026-06-04 18:38:27 | INFO     | root:42 | 日志文件: /Users/mac/AI/api-automation/logs/test_20260604_183827.log
+
+============================================================
+
+📊 测试执行结果
+接口名称         |用例标题                |请求数据                                                                          |HTTP状态码|业务code|响应消息|执行结果|返回体                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+-----------------+------------------------+----------------------------------------------------------------------------------+----------+--------+--------+--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+page_query_on_job|正常请求-使用原始参数   |{"staffName": "", "currentPage": 1, "pageSize": 10, "orgId": "179", "tenantId": 2}|200       |0       |请求成功|通过    |{  "code": 0,  "message": "请求成功",  "askId": "b2b8ed942ef4419a85b377cb5719154c",  "data": {    "data": [      {        "id": null,        "orgId": null,        "fsId": "e3bd589e",        "staffName": "张彤",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00ee_96710a86-01d8-4849-8c43-e968c6b442dg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "133********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          },          {            "orgId": 212,            "orgName": "效能服务事业部",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "e64eb1c2",        "staffName": "邵玉凤",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_005c_32f75905-7960-432e-b3ed-f106d2e1534g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "177********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "1b1a57e3",        "staffName": "向全超",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0096_0c554365-8414-4fef-938e-e29a5361e98g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "151********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 268,            "orgName": "凌云团",            "master": false          },          {            "orgId": 214,            "orgName": "微服务客户组",            "master": true          },          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": false          },          {            "orgId": 282,            "orgName": "yp-m",            "master": false          },          {            "orgId": 309,            "orgName": "鱼泡大学",            "master": false          },          {            "orgId": 332,            "orgName": "质量保障部",            "master": false          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          },          {            "orgId": 191,            "orgName": "1-1",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "81g837eb",        "staffName": "罗玉林",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00qc_eac1d995-393b-4500-b7a7-02f1f040f5bg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "151********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": true          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "272bffb6",        "staffName": "田丹",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00nj_b514b393-2088-4bf3-a148-76dca2bf7bfg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "159********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "18gc4c15",        "staffName": "罗莉",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_3da79ba2-481e-4ae9-8c9f-a5aa116fe86g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "132********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 282,            "orgName": "yp-m",            "master": true          },          {            "orgId": 332,            "orgName": "质量保障部",            "master": false          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "9bbe942e",        "staffName": "周洪建",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/a673470e-9ab0-4aea-babe-8fbc5d79352g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "156********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "a9c9aae1",        "staffName": "田原",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00u3_3abb2aea-3076-4988-8496-335e87befccg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "189********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "da3ac256",        "staffName": "李鑫",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00te_828c2531-1f7a-44bb-a91e-5af27091195g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "191********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": true          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "95a179b9",        "staffName": "张哲",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0011g_86aff570-7d2e-4b15-814c-a49dc6b21ddg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "177********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": false          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      }    ],    "paginator": {      "currentPage": 1,      "pageSize": 10,      "totalRecord": 10,      "totalPage": 1,      "orderSegment": null    }  },  "error": false}
+page_query_on_job|异常-空请求体           |-                                                                                 |200       |0       |请求成功|通过    |{  "code": 0,  "message": "请求成功",  "askId": "aed3425350f04d3ebff13219ed2d213d",  "data": {    "data": [],    "paginator": {      "currentPage": 1,      "pageSize": 50,      "totalRecord": null,      "totalPage": null,      "orderSegment": null    }  },  "error": false}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+page_query_on_job|异常-缺少字段staffName  |{"currentPage": 1, "pageSize": 10, "orgId": "179", "tenantId": 2}                 |200       |0       |请求成功|通过    |{  "code": 0,  "message": "请求成功",  "askId": "ffdd2adafcfb460ba503be3e63381e65",  "data": {    "data": [      {        "id": null,        "orgId": null,        "fsId": "e3bd589e",        "staffName": "张彤",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00ee_96710a86-01d8-4849-8c43-e968c6b442dg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "133********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          },          {            "orgId": 212,            "orgName": "效能服务事业部",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "e64eb1c2",        "staffName": "邵玉凤",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_005c_32f75905-7960-432e-b3ed-f106d2e1534g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "177********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "1b1a57e3",        "staffName": "向全超",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0096_0c554365-8414-4fef-938e-e29a5361e98g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "151********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 268,            "orgName": "凌云团",            "master": false          },          {            "orgId": 214,            "orgName": "微服务客户组",            "master": true          },          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": false          },          {            "orgId": 282,            "orgName": "yp-m",            "master": false          },          {            "orgId": 309,            "orgName": "鱼泡大学",            "master": false          },          {            "orgId": 332,            "orgName": "质量保障部",            "master": false          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          },          {            "orgId": 191,            "orgName": "1-1",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "81g837eb",        "staffName": "罗玉林",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00qc_eac1d995-393b-4500-b7a7-02f1f040f5bg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "151********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": true          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "272bffb6",        "staffName": "田丹",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00nj_b514b393-2088-4bf3-a148-76dca2bf7bfg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "159********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "18gc4c15",        "staffName": "罗莉",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_3da79ba2-481e-4ae9-8c9f-a5aa116fe86g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "132********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 282,            "orgName": "yp-m",            "master": true          },          {            "orgId": 332,            "orgName": "质量保障部",            "master": false          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "9bbe942e",        "staffName": "周洪建",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/a673470e-9ab0-4aea-babe-8fbc5d79352g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "156********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "a9c9aae1",        "staffName": "田原",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00u3_3abb2aea-3076-4988-8496-335e87befccg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "189********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "da3ac256",        "staffName": "李鑫",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00te_828c2531-1f7a-44bb-a91e-5af27091195g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "191********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": true          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "95a179b9",        "staffName": "张哲",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0011g_86aff570-7d2e-4b15-814c-a49dc6b21ddg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "177********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": false          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      }    ],    "paginator": {      "currentPage": 1,      "pageSize": 10,      "totalRecord": 10,      "totalPage": 1,      "orderSegment": null    }  },  "error": false}
+page_query_on_job|异常-缺少字段currentPage|{"staffName": "", "pageSize": 10, "orgId": "179", "tenantId": 2}                  |200       |0       |请求成功|通过    |{  "code": 0,  "message": "请求成功",  "askId": "f1dbe93b78bd4ea8832faa4cb8d78017",  "data": {    "data": [      {        "id": null,        "orgId": null,        "fsId": "e3bd589e",        "staffName": "张彤",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00ee_96710a86-01d8-4849-8c43-e968c6b442dg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "133********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          },          {            "orgId": 212,            "orgName": "效能服务事业部",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "e64eb1c2",        "staffName": "邵玉凤",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_005c_32f75905-7960-432e-b3ed-f106d2e1534g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "177********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "1b1a57e3",        "staffName": "向全超",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0096_0c554365-8414-4fef-938e-e29a5361e98g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "151********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 268,            "orgName": "凌云团",            "master": false          },          {            "orgId": 214,            "orgName": "微服务客户组",            "master": true          },          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": false          },          {            "orgId": 282,            "orgName": "yp-m",            "master": false          },          {            "orgId": 309,            "orgName": "鱼泡大学",            "master": false          },          {            "orgId": 332,            "orgName": "质量保障部",            "master": false          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          },          {            "orgId": 191,            "orgName": "1-1",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "81g837eb",        "staffName": "罗玉林",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00qc_eac1d995-393b-4500-b7a7-02f1f040f5bg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "151********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": true          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "272bffb6",        "staffName": "田丹",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00nj_b514b393-2088-4bf3-a148-76dca2bf7bfg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "159********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "18gc4c15",        "staffName": "罗莉",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_3da79ba2-481e-4ae9-8c9f-a5aa116fe86g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "132********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 282,            "orgName": "yp-m",            "master": true          },          {            "orgId": 332,            "orgName": "质量保障部",            "master": false          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "9bbe942e",        "staffName": "周洪建",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/a673470e-9ab0-4aea-babe-8fbc5d79352g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "156********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "a9c9aae1",        "staffName": "田原",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00u3_3abb2aea-3076-4988-8496-335e87befccg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "189********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "da3ac256",        "staffName": "李鑫",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00te_828c2531-1f7a-44bb-a91e-5af27091195g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "191********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": true          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "95a179b9",        "staffName": "张哲",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0011g_86aff570-7d2e-4b15-814c-a49dc6b21ddg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "177********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": false          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      }    ],    "paginator": {      "currentPage": 1,      "pageSize": 10,      "totalRecord": 10,      "totalPage": 1,      "orderSegment": null    }  },  "error": false}
+page_query_on_job|异常-缺少字段pageSize   |{"staffName": "", "currentPage": 1, "orgId": "179", "tenantId": 2}                |200       |0       |请求成功|通过    |{  "code": 0,  "message": "请求成功",  "askId": "b4e37313a20e4206ae11237666b383ce",  "data": {    "data": [      {        "id": null,        "orgId": null,        "fsId": "e3bd589e",        "staffName": "张彤",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00ee_96710a86-01d8-4849-8c43-e968c6b442dg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "133********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          },          {            "orgId": 212,            "orgName": "效能服务事业部",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "e64eb1c2",        "staffName": "邵玉凤",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_005c_32f75905-7960-432e-b3ed-f106d2e1534g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "177********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "1b1a57e3",        "staffName": "向全超",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0096_0c554365-8414-4fef-938e-e29a5361e98g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "151********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 268,            "orgName": "凌云团",            "master": false          },          {            "orgId": 214,            "orgName": "微服务客户组",            "master": true          },          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": false          },          {            "orgId": 282,            "orgName": "yp-m",            "master": false          },          {            "orgId": 309,            "orgName": "鱼泡大学",            "master": false          },          {            "orgId": 332,            "orgName": "质量保障部",            "master": false          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          },          {            "orgId": 191,            "orgName": "1-1",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "81g837eb",        "staffName": "罗玉林",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00qc_eac1d995-393b-4500-b7a7-02f1f040f5bg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "151********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": true          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "272bffb6",        "staffName": "田丹",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00nj_b514b393-2088-4bf3-a148-76dca2bf7bfg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "159********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "18gc4c15",        "staffName": "罗莉",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_3da79ba2-481e-4ae9-8c9f-a5aa116fe86g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "132********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 282,            "orgName": "yp-m",            "master": true          },          {            "orgId": 332,            "orgName": "质量保障部",            "master": false          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "9bbe942e",        "staffName": "周洪建",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/a673470e-9ab0-4aea-babe-8fbc5d79352g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "156********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "a9c9aae1",        "staffName": "田原",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00u3_3abb2aea-3076-4988-8496-335e87befccg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "189********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "da3ac256",        "staffName": "李鑫",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00te_828c2531-1f7a-44bb-a91e-5af27091195g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "191********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": true          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "95a179b9",        "staffName": "张哲",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0011g_86aff570-7d2e-4b15-814c-a49dc6b21ddg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "177********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": false          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      }    ],    "paginator": {      "currentPage": 1,      "pageSize": 50,      "totalRecord": 10,      "totalPage": 1,      "orderSegment": null    }  },  "error": false}
+page_query_on_job|异常-未携带认证信息     |{"staffName": "", "currentPage": 1, "pageSize": 10, "orgId": "179", "tenantId": 2}|200       |0       |请求成功|通过    |{  "code": 0,  "message": "请求成功",  "askId": "b672b3345d774505ae364b46cf882138",  "data": {    "data": [      {        "id": null,        "orgId": null,        "fsId": "e3bd589e",        "staffName": "张彤",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00ee_96710a86-01d8-4849-8c43-e968c6b442dg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "133********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          },          {            "orgId": 212,            "orgName": "效能服务事业部",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "e64eb1c2",        "staffName": "邵玉凤",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_005c_32f75905-7960-432e-b3ed-f106d2e1534g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "177********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "1b1a57e3",        "staffName": "向全超",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0096_0c554365-8414-4fef-938e-e29a5361e98g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "151********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 268,            "orgName": "凌云团",            "master": false          },          {            "orgId": 214,            "orgName": "微服务客户组",            "master": true          },          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": false          },          {            "orgId": 282,            "orgName": "yp-m",            "master": false          },          {            "orgId": 309,            "orgName": "鱼泡大学",            "master": false          },          {            "orgId": 332,            "orgName": "质量保障部",            "master": false          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          },          {            "orgId": 191,            "orgName": "1-1",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "81g837eb",        "staffName": "罗玉林",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00qc_eac1d995-393b-4500-b7a7-02f1f040f5bg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "151********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": true          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "272bffb6",        "staffName": "田丹",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00nj_b514b393-2088-4bf3-a148-76dca2bf7bfg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "159********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "18gc4c15",        "staffName": "罗莉",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v2_3da79ba2-481e-4ae9-8c9f-a5aa116fe86g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "132********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 282,            "orgName": "yp-m",            "master": true          },          {            "orgId": 332,            "orgName": "质量保障部",            "master": false          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "9bbe942e",        "staffName": "周洪建",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/a673470e-9ab0-4aea-babe-8fbc5d79352g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "156********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "a9c9aae1",        "staffName": "田原",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00u3_3abb2aea-3076-4988-8496-335e87befccg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "189********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "da3ac256",        "staffName": "李鑫",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_00te_828c2531-1f7a-44bb-a91e-5af27091195g~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "191********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": true          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": false          }        ],        "email": null,        "nameEnglish": null      },      {        "id": null,        "orgId": null,        "fsId": "95a179b9",        "staffName": "张哲",        "avatarUrl": "https://s1-imfile.feishucdn.com/static-resource/v1/v3_0011g_86aff570-7d2e-4b15-814c-a49dc6b21ddg~?image_size=noop&cut_type=&quality=&format=png&sticker_format=.webp",        "mobileMask": "177********",        "employeeStatusType": 1,        "position": null,        "orgs": [          {            "orgId": 190,            "orgName": "测试哈哈哈哈",            "master": false          },          {            "orgId": 179,            "orgName": "定向任务分配测试",            "master": true          }        ],        "email": null,        "nameEnglish": null      }    ],    "paginator": {      "currentPage": 1,      "pageSize": 10,      "totalRecord": 10,      "totalPage": 1,      "orderSegment": null    }  },  "error": false}
+page_query_on_job|响应时间检测(≤5s)       |-                                                                                 |-         |-       |-       |通过    |-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+
+📈 汇总: 共 7 条用例, 通过 7, 失败 0

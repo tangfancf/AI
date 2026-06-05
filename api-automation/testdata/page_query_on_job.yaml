@@ -1,0 +1,91 @@
+api_info:
+  name: page_query_on_job
+  method: POST
+  path: /scrm/v1/orgStaff/pageQueryOnJob
+  base_url: https://yupao-test-backend.yupaowang.com
+test_cases:
+- case_id: PAGE_QUERY_ON_JOB_001
+  title: 正常请求-使用原始参数
+  method: POST
+  path: /scrm/v1/orgStaff/pageQueryOnJob
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: &id001
+    Hm_lvt_14752563c89f0870e93d2f6ac497f815: '1778463007'
+    jwtToken: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ZW5hbnRzIjpbImFkcyIsImFtcyIsImNjb3MiLCJjbXMiLCJjc3MiLCJlZGkiLCJmZWlzaHVoNSIsImhhaXRvdSIsImhlbGxvIiwiamlnb25namlhIiwibW1zIiwicW1zIiwicW1zIiwicmNzIiwic2NybSIsInVwbXMiLCJ5dXBhbyIsInl1cGFvZGFvamlhIiwieXVwYW9kYW9qaWEiXSwib3BlbklkIjoib3VfZTQ5MDQyNWZhYTNiNmQxNGVjYTJlYjU3NWZiNmVjNDEiLCJ1c2VyTmFtZSI6IuaxpOeVqiIsImV4cCI6MTc4MDk2OTY1NywidXNlcklkIjoiNjcyYjdnNmQifQ.cdDLX1yyE4sn9-tu5BrYfxPdOwZKpKYrZxitBzqxPEk
+  body: &id002
+    staffName: ''
+    currentPage: 1
+    pageSize: 10
+    orgId: '179'
+    tenantId: 2
+  expected:
+    status_code: 200
+- case_id: PAGE_QUERY_ON_JOB_002
+  title: 异常-空请求体
+  method: POST
+  path: /scrm/v1/orgStaff/pageQueryOnJob
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body: {}
+  expected:
+    status_code: 200
+- case_id: PAGE_QUERY_ON_JOB_003
+  title: 异常-缺少字段staffName
+  method: POST
+  path: /scrm/v1/orgStaff/pageQueryOnJob
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    currentPage: 1
+    pageSize: 10
+    orgId: '179'
+    tenantId: 2
+  expected:
+    status_code: 200
+- case_id: PAGE_QUERY_ON_JOB_004
+  title: 异常-缺少字段currentPage
+  method: POST
+  path: /scrm/v1/orgStaff/pageQueryOnJob
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    staffName: ''
+    pageSize: 10
+    orgId: '179'
+    tenantId: 2
+  expected:
+    status_code: 200
+- case_id: PAGE_QUERY_ON_JOB_005
+  title: 异常-缺少字段pageSize
+  method: POST
+  path: /scrm/v1/orgStaff/pageQueryOnJob
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    staffName: ''
+    currentPage: 1
+    orgId: '179'
+    tenantId: 2
+  expected:
+    status_code: 200
+- case_id: PAGE_QUERY_ON_JOB_NO_AUTH
+  title: 异常-未携带认证信息
+  method: POST
+  path: /scrm/v1/orgStaff/pageQueryOnJob
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: {}
+  body: *id002
+  expected:
+    status_code: 200

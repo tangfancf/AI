@@ -1,0 +1,52 @@
+# 用户 CRUD 接口测试数据
+test_cases:
+  - case_id: "USER_CREATE_001"
+    title: "创建用户-正常数据"
+    input:
+      username: "test_user_001"
+      email: "test001@example.com"
+      phone: "13800138001"
+      role: "user"
+    expected:
+      status_code: 200
+      code: 0
+      msg: "success"
+
+  - case_id: "USER_CREATE_002"
+    title: "创建用户-重复用户名"
+    input:
+      username: "test_user_001"
+      email: "test002@example.com"
+      phone: "13800138002"
+      role: "user"
+    expected:
+      status_code: 200
+      code: -1
+      msg: "用户名已存在"
+
+  - case_id: "USER_QUERY_001"
+    title: "查询用户-按ID查询"
+    input:
+      user_id: "${user_id}"
+    expected:
+      status_code: 200
+      code: 0
+
+  - case_id: "USER_UPDATE_001"
+    title: "更新用户-修改邮箱"
+    input:
+      user_id: "${user_id}"
+      email: "updated@example.com"
+    expected:
+      status_code: 200
+      code: 0
+      msg: "success"
+
+  - case_id: "USER_DELETE_001"
+    title: "删除用户"
+    input:
+      user_id: "${user_id}"
+    expected:
+      status_code: 200
+      code: 0
+      msg: "success"

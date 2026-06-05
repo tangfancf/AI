@@ -1,0 +1,154 @@
+测试执行时间: 2026-06-04 18:09:48
+测试文件: /Users/mac/AI/api-automation/testcases/test_remove_config.py
+============================================================
+
+============================= test session starts ==============================
+platform darwin -- Python 3.11.15, pytest-7.4.4, pluggy-1.6.0 -- /Users/mac/.pyenv/versions/3.11.15/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.15', 'Platform': 'macOS-14.6.1-x86_64-i386-64bit', 'Packages': {'pytest': '7.4.4', 'pluggy': '1.6.0'}, 'Plugins': {'locust': '2.44.0', 'html': '4.1.1', 'metadata': '3.1.1', 'Faker': '22.5.1', 'allure-pytest': '2.13.2', 'anyio': '4.13.0'}}
+rootdir: /Users/mac/AI/api-automation
+configfile: pytest.ini
+plugins: locust-2.44.0, html-4.1.1, metadata-3.1.1, Faker-22.5.1, allure-pytest-2.13.2, anyio-4.13.0
+collecting ... collected 7 items
+
+testcases/test_remove_config.py::TestRemoveConfig::test_data_driven[REMOVE_CONFIG_001] 
+-------------------------------- live log call ---------------------------------
+18:09:47 [INFO] ==================================================
+18:09:47 [INFO] 执行用例: [REMOVE_CONFIG_001] 正常请求-使用原始参数
+18:09:47 [INFO] ============================================================
+18:09:47 [INFO] 请求方法: POST
+18:09:47 [INFO] 请求URL: https://yupao-test-backend.yupaowang.com/crm-task/v1/csTaskConfig/plus/removeConfig
+18:09:47 [INFO] 请求体: {"planId": 1127, "staffFsIds": ["672b7g6d"], "orgIds": [308]}
+18:09:47 [INFO] 响应状态码: 200
+18:09:47 [INFO] 响应体: {
+  "code": 0,
+  "message": "请求成功",
+  "askId": "d73a7de07cf8446686bcfbf5c5a6d0a7",
+  "data": true,
+  "error": false
+}
+18:09:47 [INFO] ============================================================
+18:09:47 [INFO] ✓ 状态码断言通过: 200
+18:09:47 [INFO] 用例 [REMOVE_CONFIG_001] 执行完成, 响应码: 200
+PASSED                                                                   [ 14%]
+testcases/test_remove_config.py::TestRemoveConfig::test_data_driven[REMOVE_CONFIG_002] 
+-------------------------------- live log call ---------------------------------
+18:09:47 [INFO] ==================================================
+18:09:47 [INFO] 执行用例: [REMOVE_CONFIG_002] 异常-空请求体
+18:09:47 [INFO] ============================================================
+18:09:47 [INFO] 请求方法: POST
+18:09:47 [INFO] 请求URL: https://yupao-test-backend.yupaowang.com/crm-task/v1/csTaskConfig/plus/removeConfig
+18:09:47 [INFO] 响应状态码: 200
+18:09:47 [INFO] 响应体: {
+  "code": 400,
+  "message": "请选择要操作的调度规则",
+  "askId": "61a558f496a64b728f302c2d4bae1029",
+  "data": null,
+  "error": true
+}
+18:09:47 [INFO] ============================================================
+18:09:47 [INFO] ✓ 状态码断言通过: 200
+18:09:47 [INFO] 用例 [REMOVE_CONFIG_002] 执行完成, 响应码: 200
+PASSED                                                                   [ 28%]
+testcases/test_remove_config.py::TestRemoveConfig::test_data_driven[REMOVE_CONFIG_003] 
+-------------------------------- live log call ---------------------------------
+18:09:47 [INFO] ==================================================
+18:09:47 [INFO] 执行用例: [REMOVE_CONFIG_003] 异常-缺少字段planId
+18:09:47 [INFO] ============================================================
+18:09:47 [INFO] 请求方法: POST
+18:09:47 [INFO] 请求URL: https://yupao-test-backend.yupaowang.com/crm-task/v1/csTaskConfig/plus/removeConfig
+18:09:47 [INFO] 请求体: {"staffFsIds": ["672b7g6d"], "orgIds": [308]}
+18:09:47 [INFO] 响应状态码: 200
+18:09:47 [INFO] 响应体: {
+  "code": 400,
+  "message": "请选择要操作的调度规则",
+  "askId": "aa71bd8f63c44a64bb2aeea461e8a7ca",
+  "data": null,
+  "error": true
+}
+18:09:47 [INFO] ============================================================
+18:09:47 [INFO] ✓ 状态码断言通过: 200
+18:09:47 [INFO] 用例 [REMOVE_CONFIG_003] 执行完成, 响应码: 200
+PASSED                                                                   [ 42%]
+testcases/test_remove_config.py::TestRemoveConfig::test_data_driven[REMOVE_CONFIG_004] 
+-------------------------------- live log call ---------------------------------
+18:09:47 [INFO] ==================================================
+18:09:47 [INFO] 执行用例: [REMOVE_CONFIG_004] 异常-缺少字段staffFsIds
+18:09:47 [INFO] ============================================================
+18:09:47 [INFO] 请求方法: POST
+18:09:47 [INFO] 请求URL: https://yupao-test-backend.yupaowang.com/crm-task/v1/csTaskConfig/plus/removeConfig
+18:09:47 [INFO] 请求体: {"planId": 1127, "orgIds": [308]}
+18:09:47 [INFO] 响应状态码: 200
+18:09:47 [INFO] 响应体: {
+  "code": 0,
+  "message": "请求成功",
+  "askId": "0ad1aba51ee64743a93093b88f0ff79a",
+  "data": true,
+  "error": false
+}
+18:09:47 [INFO] ============================================================
+18:09:47 [INFO] ✓ 状态码断言通过: 200
+18:09:47 [INFO] 用例 [REMOVE_CONFIG_004] 执行完成, 响应码: 200
+PASSED                                                                   [ 57%]
+testcases/test_remove_config.py::TestRemoveConfig::test_data_driven[REMOVE_CONFIG_005] 
+-------------------------------- live log call ---------------------------------
+18:09:47 [INFO] ==================================================
+18:09:47 [INFO] 执行用例: [REMOVE_CONFIG_005] 异常-缺少字段orgIds
+18:09:47 [INFO] ============================================================
+18:09:47 [INFO] 请求方法: POST
+18:09:47 [INFO] 请求URL: https://yupao-test-backend.yupaowang.com/crm-task/v1/csTaskConfig/plus/removeConfig
+18:09:47 [INFO] 请求体: {"planId": 1127, "staffFsIds": ["672b7g6d"]}
+18:09:47 [INFO] 响应状态码: 200
+18:09:47 [INFO] 响应体: {
+  "code": 0,
+  "message": "请求成功",
+  "askId": "02b34103c74d462688faf64f33f8a3e6",
+  "data": true,
+  "error": false
+}
+18:09:47 [INFO] ============================================================
+18:09:47 [INFO] ✓ 状态码断言通过: 200
+18:09:47 [INFO] 用例 [REMOVE_CONFIG_005] 执行完成, 响应码: 200
+PASSED                                                                   [ 71%]
+testcases/test_remove_config.py::TestRemoveConfig::test_data_driven[REMOVE_CONFIG_NO_AUTH] 
+-------------------------------- live log call ---------------------------------
+18:09:47 [INFO] ==================================================
+18:09:47 [INFO] 执行用例: [REMOVE_CONFIG_NO_AUTH] 异常-未携带认证信息
+18:09:47 [INFO] ============================================================
+18:09:47 [INFO] 请求方法: POST
+18:09:47 [INFO] 请求URL: https://yupao-test-backend.yupaowang.com/crm-task/v1/csTaskConfig/plus/removeConfig
+18:09:47 [INFO] 请求体: {"planId": 1127, "staffFsIds": ["672b7g6d"], "orgIds": [308]}
+18:09:47 [INFO] 响应状态码: 200
+18:09:47 [INFO] 响应体: {
+  "code": 0,
+  "message": "请求成功",
+  "askId": "31b6da4579964b2e9b1ea0304b9b156a",
+  "data": true,
+  "error": false
+}
+18:09:47 [INFO] ============================================================
+18:09:47 [INFO] ✓ 状态码断言通过: 200
+18:09:47 [INFO] 用例 [REMOVE_CONFIG_NO_AUTH] 执行完成, 响应码: 200
+PASSED                                                                   [ 85%]
+testcases/test_remove_config.py::TestRemoveConfig::test_response_time 
+-------------------------------- live log call ---------------------------------
+18:09:47 [INFO] ============================================================
+18:09:47 [INFO] 请求方法: POST
+18:09:47 [INFO] 请求URL: https://yupao-test-backend.yupaowang.com/crm-task/v1/csTaskConfig/plus/removeConfig
+18:09:47 [INFO] 请求体: {"planId": 1127, "staffFsIds": ["672b7g6d"], "orgIds": [308]}
+18:09:48 [INFO] 响应状态码: 200
+18:09:48 [INFO] 响应体: {
+  "code": 0,
+  "message": "请求成功",
+  "askId": "9143311527d847728c25eb035113020f",
+  "data": true,
+  "error": false
+}
+18:09:48 [INFO] ============================================================
+18:09:48 [INFO] ✓ 响应时间断言通过: 96ms <= 5000ms
+PASSED                                                                   [100%]
+
+- generated xml file: /Users/mac/AI/api-automation/reports/result_20260604_180946.xml -
+============================== 7 passed in 0.92s ===============================
+
+2026-06-04 18:09:47 | INFO     | root:42 | 日志文件: /Users/mac/AI/api-automation/logs/test_20260604_180947.log

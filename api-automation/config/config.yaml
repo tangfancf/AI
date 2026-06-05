@@ -1,0 +1,27 @@
+# 环境配置
+env:
+  active: test  # 当前激活环境: dev / test / prod
+
+# 开发环境
+dev:
+  base_url: "https://yupao-dev-backend.yupaowang.com"
+  timeout: 30
+  auth:
+    username: "tangfan"
+    password: "P@ssw0rd"
+
+# 测试环境
+test:
+  base_url: "https://yupao-test-backend.yupaowang.com"
+  timeout: 30
+  auth:
+    username: "tangfan"
+    password: "P@ssw0rd"
+
+# 生产环境
+prod:
+  base_url: "https://yupao-backend.yupaowang.com"
+  timeout: 60
+  auth:
+    username: ""
+    password: ""

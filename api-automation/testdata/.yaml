@@ -1,0 +1,24 @@
+api_info:
+  name: ''
+  method: GET
+  path: '{'
+  base_url: ://
+test_cases:
+- case_id: _001
+  title: 正常请求-使用原始参数
+  method: GET
+  path: '{'
+  headers: {}
+  cookies: {}
+  body: null
+  expected:
+    status_code: 200
+- case_id: _NO_AUTH
+  title: 异常-未携带认证信息
+  method: GET
+  path: '{'
+  headers: {}
+  cookies: {}
+  body: null
+  expected:
+    status_code: 200
