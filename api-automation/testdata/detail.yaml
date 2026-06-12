@@ -1,0 +1,30 @@
+api_info:
+  name: detail
+  method: POST
+  path: /scrm/v1/sea/modelLeadImportRule/detail
+  base_url: https://yupao-test-backend.yupaowang.com
+test_cases:
+- case_id: DETAIL_001
+  title: 正向场景-全参数有效
+  method: POST
+  path: /scrm/v1/sea/modelLeadImportRule/detail
+  headers:
+    Content-Type: application/json
+    business: scrm
+  cookies:
+    Hm_lvt_14752563c89f0870e93d2f6ac497f815: '1778463007'
+    jwtToken: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ZW5hbnRzIjpbImFkcyIsImFtcyIsImNjb3MiLCJjbXMiLCJjc3MiLCJlZGkiLCJmZWlzaHVoNSIsImhhaXRvdSIsImhlbGxvIiwiamlnb25namlhIiwibW1zIiwicW1zIiwicW1zIiwicmNzIiwic2NybSIsInVwbXMiLCJ5dXBhbyIsInl1cGFvZGFvamlhIiwieXVwYW9kYW9qaWEiXSwib3BlbklkIjoib3VfZTQ5MDQyNWZhYTNiNmQxNGVjYTJlYjU3NWZiNmVjNDEiLCJ1c2VyTmFtZSI6IuaxpOeVqiIsImV4cCI6MTc4MTc2NzkxNCwidXNlcklkIjoiNjcyYjdnNmQifQ.NCLA_pf4xzwoa2eVX_JNo8JdYwp8MO25h_aAAemWtHs
+  body: &id001 {}
+  expected:
+    status_code: 200
+- case_id: DETAIL_NO_AUTH
+  title: 【安全测试】未授权访问-无token或cookie访问
+  method: POST
+  path: /scrm/v1/sea/modelLeadImportRule/detail
+  headers:
+    Content-Type: application/json
+    business: scrm
+  cookies: {}
+  body: *id001
+  expected:
+    status_code: 200

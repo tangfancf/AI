@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>接口测试报告 - save</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 20px; background: #f5f7fa; }
+        h1 { color: #333; border-bottom: 2px solid #4a90d9; padding-bottom: 10px; }
+        .summary { background: #fff; padding: 15px 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .summary span { margin-right: 20px; font-size: 14px; }
+        .total { color: #333; font-weight: bold; }
+        .pass-count { color: #52c41a; font-weight: bold; }
+        .fail-count { color: #f5222d; font-weight: bold; }
+        table { border-collapse: collapse; width: 100%; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        th { background: #4a90d9; color: #fff; padding: 12px 10px; text-align: left; font-size: 13px; white-space: nowrap; }
+        td { padding: 10px; border-bottom: 1px solid #eee; font-size: 13px; word-break: break-all; }
+        tr:hover { background: #f0f7ff; }
+        .pass { color: #52c41a; font-weight: bold; }
+        .fail { color: #f5222d; font-weight: bold; }
+        .skip { color: #faad14; font-weight: bold; }
+        .body-cell { max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; }
+        .body-cell:hover { white-space: normal; word-break: break-all; }
+        .footer { margin-top: 20px; color: #999; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <h1>📊 接口测试报告 - save</h1>
+    <div class="summary">
+        <span class="total">总计: 46 条用例</span>
+        <span class="pass-count">✅ 通过: 46</span>
+        <span class="fail-count">❌ 失败: 0</span>
+        <span>生成时间: 2026-06-11 19:01:17</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>接口名称</th>
+          <th>用例标题</th>
+          <th>请求数据</th>
+          <th>HTTP状态码</th>
+          <th>业务code</th>
+          <th>响应消息</th>
+          <th>执行结果</th>
+          <th>返回体</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>save</td>
+          <td>正向场景-全参数有效</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;61afd0efcb254c68bd86bc964171bea0&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>正向场景-仅必填字段</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1}">{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1...</td>
+          <td>200</td>
+          <td>400</td>
+          <td>公海回收规则ID不能为空</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;公海回收规则ID不能为空&quot;,  &quot;askId&quot;: &quot;13ee7c7e61e24db7902b7ad1339f2554&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;公海回收规则ID不能为空&quot;,  &quot...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>业务变体</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;RFM_variant&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;RFM_variant&quot;, &quot;dataTypes&quot;: [&quot;...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;b61593b6f4b8498881daf7ee4590b3cb&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>异常场景-缺少必填字段-leadSource</td>
+          <td class="body-cell" title="{&quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;...</td>
+          <td>200</td>
+          <td>400</td>
+          <td>线索源不能为空</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;线索源不能为空&quot;,  &quot;askId&quot;: &quot;09676aaf7c4f4a439e7f908c2f67d927&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;线索源不能为空&quot;,  &quot;askI...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>异常场景-缺少必填字段-dataTypes</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;consecutiveDays&quot;: 1, &quot;...</td>
+          <td>200</td>
+          <td>400</td>
+          <td>数据类型不能为空</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;数据类型不能为空&quot;,  &quot;askId&quot;: &quot;3f43efaeb90b45fe990d1fd79550b704&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;数据类型不能为空&quot;,  &quot;ask...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>异常场景-缺少必填字段-consecutiveDays</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1...</td>
+          <td>200</td>
+          <td>400</td>
+          <td>连续进入天数不能为空</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;连续进入天数不能为空&quot;,  &quot;askId&quot;: &quot;c98de10c64904580a869e50bbf91b896&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;连续进入天数不能为空&quot;,  &quot;a...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>类型转换测试-传入字符串</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: &quot;abc_string&quot;, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1...</td>
+          <td>200</td>
+          <td>400</td>
+          <td>请求参数格式不正确</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;请求参数格式不正确&quot;,  &quot;askId&quot;: &quot;3226da9681d04ac9b1ffb7386afb953b&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;请求参数格式不正确&quot;,  &quot;as...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>空值测试-请求体为null</td>
+          <td class="body-cell" title="-">-</td>
+          <td>200</td>
+          <td>400</td>
+          <td>请求参数错误</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;请求参数错误&quot;,  &quot;askId&quot;: &quot;8eaf6649591c408ead3ea4508220c6a1&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;请求参数错误&quot;,  &quot;askId...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>空值测试-字段为null</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: null, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: null, &quot;dataTypes&quot;: [&quot;RFM_fp_198154409571...</td>
+          <td>200</td>
+          <td>400</td>
+          <td>线索源不能为空</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;线索源不能为空&quot;,  &quot;askId&quot;: &quot;ae7006ea64c7451cb5506b834da67d29&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;线索源不能为空&quot;,  &quot;askI...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>空值测试-空对象</td>
+          <td class="body-cell" title="-">-</td>
+          <td>200</td>
+          <td>400</td>
+          <td>线索源不能为空</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;线索源不能为空&quot;,  &quot;askId&quot;: &quot;c63f84700a9948aaa17d4adf7271aa20&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;线索源不能为空&quot;,  &quot;askI...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>边界测试-零值</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 0, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;f1cceab41d414deb87e33c92a6ac50f9&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>边界测试-负数</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: -1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;69a6b6c038844176882a77f822c3b7f4&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>边界测试-极大值</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 9999999999999, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1...</td>
+          <td>200</td>
+          <td>400</td>
+          <td>请求参数格式不正确</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;请求参数格式不正确&quot;,  &quot;askId&quot;: &quot;8af5f71ad20845e6972ce0259c84b625&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;请求参数格式不正确&quot;,  &quot;as...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>复杂类型测试-传入字符串</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: &quot;invalid_string&quot;, &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: &quot;invalid_s...</td>
+          <td>200</td>
+          <td>400</td>
+          <td>请求参数格式不正确</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;请求参数格式不正确&quot;,  &quot;askId&quot;: &quot;f22805a5dc0348c6bea60f2240427831&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;请求参数格式不正确&quot;,  &quot;as...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>复杂类型测试-非数字字符串</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: &quot;not_a_number_xyz&quot;, &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: &quot;not_a_num...</td>
+          <td>200</td>
+          <td>400</td>
+          <td>请求参数格式不正确</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;请求参数格式不正确&quot;,  &quot;askId&quot;: &quot;ebd564937f2540a8a22b797e464867e9&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;请求参数格式不正确&quot;,  &quot;as...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】未授权访问-无token或cookie访问</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1...</td>
+          <td>200</td>
+          <td>601</td>
+          <td>用户需要登录</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 601,  &quot;message&quot;: &quot;用户需要登录&quot;,  &quot;askId&quot;: &quot;bc3c4822fdef49e2bea331fa145eb8d2&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 601,  &quot;message&quot;: &quot;用户需要登录&quot;,  &quot;askId...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】SQL注入-盲注-布尔盲注</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;&#x27; AND &#x27;1&#x27;=&#x27;1&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;&#x27; AND &#x27;1&#x27;=&#x27;1&quot;, &quot;dat...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;439ad778cd2b40598da7d81e7a1cd34e&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】SQL注入-盲注-时间盲注</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;&#x27;; WAITFOR DELAY &#x27;0:0:5&#x27;--&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;&#x27;; WAITFOR DELAY &#x27;0:0:5&#x27;--&quot;, ...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;0576f40f99ba423b97c0a10955305d92&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】SQL注入-盲注-报错注入</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;&#x27; AND extractvalue(1,concat(0x7e,(SELECT version()),0x7e))--&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;&#x27; AND extractvalue(1,concat(0x7e,(SELECT ver...</td>
+          <td>200</td>
+          <td>500</td>
+          <td>服务器内部错误</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 500,  &quot;message&quot;: &quot;服务器内部错误&quot;,  &quot;askId&quot;: &quot;dbf6107a65084b9b89c83b3a54e9f19a&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 500,  &quot;message&quot;: &quot;服务器内部错误&quot;,  &quot;askI...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】SQL注入-盲注-单引号闭合</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;&#x27; OR &#x27;1&#x27;=&#x27;1&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;&#x27; OR &#x27;1&#x27;=&#x27;1&quot;, &quot;data...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;a6ec57cff364467a9c83de13217c57b9&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】SQL注入-盲注-注释符截断</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;&#x27;; DROP TABLE users;--&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;&#x27;; DROP TABLE users;--&quot;, &quot;dataType...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;c183a5f75ea24b7eb652a7c0e16a9aef&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】水平越权</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 100004}">{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;87a8c7d7e78e4a68af96d85698bdcd0d&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】XSS攻击-script标签</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;&lt;script&gt;alert(&#x27;XSS&#x27;)&lt;/script&gt;&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;&lt;script&gt;alert(&#x27;XSS&#x27;)&lt;/script&g...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;8968d8c862714ea2827067525dd4e4dc&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】XSS攻击-事件处理器</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;&lt;img src=x onerror=alert(&#x27;XSS&#x27;)&gt;&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;&lt;img src=x onerror=alert(&#x27;XSS&#x27;)&gt;&...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;7fe88e1850ed46c5a95ec9a880bc40dc&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】XSS攻击-编码绕过</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;%3Cscript%3Ealert(&#x27;XSS&#x27;)%3C/script%3E&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;%3Cscript%3Ealert(&#x27;XSS&#x27;)%3C/script%3E&q...</td>
+          <td>200</td>
+          <td>500</td>
+          <td>服务器内部错误</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 500,  &quot;message&quot;: &quot;服务器内部错误&quot;,  &quot;askId&quot;: &quot;57e1834efd2543199da2f7e31f76a8b9&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 500,  &quot;message&quot;: &quot;服务器内部错误&quot;,  &quot;askI...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】Header注入-X-Forwarded-For伪造IP</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;2d60302243fd4740b72f67665b743e4b&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】Header注入-User-Agent恶意工具检测</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;b3d7def128d94a9f8088a5d89d083a85&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】批量遍历</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 6}">{&quot;leadSource&quot;: &quot;RFM&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;4474b56666904c2dab6b25cf387e6c10&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】参数类型-数组代替字符串</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: [1, 2, 3], &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: [1, 2, 3], &quot;dataTypes&quot;: [&quot;RFM_fp_1981544...</td>
+          <td>200</td>
+          <td>400</td>
+          <td>请求参数格式不正确</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;请求参数格式不正确&quot;,  &quot;askId&quot;: &quot;1d7dfcd1e6b8471c89666993e3b649c7&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;请求参数格式不正确&quot;,  &quot;as...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】参数类型-对象代替字符串</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: {&quot;key&quot;: &quot;value&quot;}, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: {&quot;key&quot;: &quot;value&quot;}, &quot;dataTypes&q...</td>
+          <td>200</td>
+          <td>400</td>
+          <td>请求参数格式不正确</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;请求参数格式不正确&quot;,  &quot;askId&quot;: &quot;3d8188fa9e3b4c0b9675350cd967d1ff&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;请求参数格式不正确&quot;,  &quot;as...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】参数类型-布尔值代替字符串</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: true, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: true, &quot;dataTypes&quot;: [&quot;RFM_fp_198154409571...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;392d877b252f416aa44cb2bc2df09858&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】参数边界-超长字符串1024</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...</td>
+          <td>200</td>
+          <td>500</td>
+          <td>服务器内部错误</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 500,  &quot;message&quot;: &quot;服务器内部错误&quot;,  &quot;askId&quot;: &quot;ae52a339030d468cb3bc837d5c7c7f82&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 500,  &quot;message&quot;: &quot;服务器内部错误&quot;,  &quot;askI...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】参数边界-超长字符串10000</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB...</td>
+          <td>200</td>
+          <td>500</td>
+          <td>服务器内部错误</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 500,  &quot;message&quot;: &quot;服务器内部错误&quot;,  &quot;askId&quot;: &quot;a3996430def04f06acbb8fccaa1d15fe&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 500,  &quot;message&quot;: &quot;服务器内部错误&quot;,  &quot;askI...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】参数边界-特殊字符组合</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;!@#$%^&amp;*()_+-=[]{}|;&#x27;:\&quot;,./&lt;&gt;?`~&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;!@#$%^&amp;*()_+-=[]{}|;&#x27;:\&quot;,./&lt;&gt;...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;d65f2ae5d2c446ab9ebf1cd46471081d&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>【安全测试】参数边界-空字符串</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981...</td>
+          <td>200</td>
+          <td>400</td>
+          <td>线索源不能为空</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;线索源不能为空&quot;,  &quot;askId&quot;: &quot;c817f70f493e428e8e94e43215c66e26&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 400,  &quot;message&quot;: &quot;线索源不能为空&quot;,  &quot;askI...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>安全-UNION注入-列数探测</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;&#x27; UNION SELECT NULL,NULL,NULL--&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;&#x27; UNION SELECT NULL,NULL,NULL--&quot;, &quot...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;da53b9b3ab4542329745da8936e7f7a6&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>安全-UNION注入-信息泄露</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;0 UNION SELECT table_name,column_name FROM information_schema.columns--&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;0 UNION SELECT table_name,column_name FROM inform...</td>
+          <td>200</td>
+          <td>500</td>
+          <td>服务器内部错误</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 500,  &quot;message&quot;: &quot;服务器内部错误&quot;,  &quot;askId&quot;: &quot;68cb07da90a740099f191b5861dfe884&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 500,  &quot;message&quot;: &quot;服务器内部错误&quot;,  &quot;askI...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>安全-命令注入-管道符执行</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;|ls -la /etc/passwd&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;|ls -la /etc/passwd&quot;, &quot;dataTypes&quot;:...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;acaf6388c49647619d7940a41760d70b&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>安全-命令注入-反引号执行</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;`cat /etc/passwd`&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;`cat /etc/passwd`&quot;, &quot;dataTypes&quot;: [...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;c8c545d7d3cd46efb5d69f8aa82325ec&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>安全-命令注入-$()语法</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;$(whoami)&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;$(whoami)&quot;, &quot;dataTypes&quot;: [&quot;RF...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;0babafdbd18f4ebab84da8e757f87663&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>边界-超长字符串-1024字符</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...</td>
+          <td>200</td>
+          <td>500</td>
+          <td>服务器内部错误</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 500,  &quot;message&quot;: &quot;服务器内部错误&quot;,  &quot;askId&quot;: &quot;da3cfe4b165144f39cf82821396fbc0f&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 500,  &quot;message&quot;: &quot;服务器内部错误&quot;,  &quot;askI...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>边界-超长字符串-10000字符</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB...</td>
+          <td>200</td>
+          <td>500</td>
+          <td>服务器内部错误</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 500,  &quot;message&quot;: &quot;服务器内部错误&quot;,  &quot;askId&quot;: &quot;30b500cc0ef34a949503f08b75bbfd65&quot;,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 500,  &quot;message&quot;: &quot;服务器内部错误&quot;,  &quot;askI...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>边界-中文字符-常规中文</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;测试中文字符输入内容一二三四五六七八九十&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;测试中文字符输入内容一二三四五六七八九十&quot;, &quot;dataTypes&quot;...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;312a1959c71e4a609961b1c26eddb078&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>边界-中文字符-特殊符号</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;测试！@#￥%……&amp;*（）——+【】{}|；&#x27;：《》？，。、&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;测试！@#￥%……&amp;*（）——+【】{}|；&#x27;：《》？，。、&quot;, &q...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;509f49f4e6e54b97a9d102e5270c1fb8&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>边界-中文字符-emoji和特殊字符</td>
+          <td class="body-cell" title="{&quot;leadSource&quot;: &quot;🔥💀👻测试emoji™®©℃①②③㊀㊁㊂&quot;, &quot;dataTypes&quot;: [&quot;RFM_fp_1981544095710863361_realtime&quot;, &quot;RFM_fp_default_history_realtime&quot;, &quot;RFM_fp_1981544095710863361_offline&quot;], &quot;consecutiveDays&quot;: 1, &quot;enabled&quot;: 1, &quot;seaRuleId&quot;: 5}">{&quot;leadSource&quot;: &quot;🔥💀👻测试emoji™®©℃①②③㊀㊁㊂&quot;, &quot;dataTypes&quot;...</td>
+          <td>200</td>
+          <td>0</td>
+          <td>请求成功</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quot;: &quot;b411e9aa807d429db8f9879ac3eac8a3&quot;,  &quot;data&quot;: {    &quot;success&quot;: true  },  &quot;error&quot;: false}">{  &quot;code&quot;: 0,  &quot;message&quot;: &quot;请求成功&quot;,  &quot;askId&quo...</td>
+        </tr>
+        <tr>
+          <td>save</td>
+          <td>响应时间检测(≤5s)</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td class="pass">通过</td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="footer">由 curl_to_test.py 自动生成 | 2026-06-11 19:01:17</div>
+</body>
+</html>

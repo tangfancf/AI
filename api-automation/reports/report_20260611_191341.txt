@@ -1,0 +1,102 @@
+测试执行时间: 2026-06-11 19:13:43
+测试文件: /Users/mac/AI/api-automation/testcases/test_detail.py
+============================================================
+
+============================= test session starts ==============================
+platform darwin -- Python 3.11.15, pytest-7.4.4, pluggy-1.6.0 -- /Users/mac/.pyenv/versions/3.11.15/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.15', 'Platform': 'macOS-14.6.1-x86_64-i386-64bit', 'Packages': {'pytest': '7.4.4', 'pluggy': '1.6.0'}, 'Plugins': {'locust': '2.44.0', 'html': '4.1.1', 'metadata': '3.1.1', 'Faker': '22.5.1', 'allure-pytest': '2.13.2', 'anyio': '4.13.0'}}
+rootdir: /Users/mac/AI/api-automation
+configfile: pytest.ini
+plugins: locust-2.44.0, html-4.1.1, metadata-3.1.1, Faker-22.5.1, allure-pytest-2.13.2, anyio-4.13.0
+collecting ... collected 3 items
+
+testcases/test_detail.py::TestDetail::test_data_driven[DETAIL_001] 
+-------------------------------- live log call ---------------------------------
+19:13:42 [INFO] ==================================================
+19:13:42 [INFO] 执行用例: [DETAIL_001] 正向场景-全参数有效
+19:13:42 [INFO] ============================================================
+19:13:42 [INFO] 请求方法: POST
+19:13:42 [INFO] 请求URL: https://yupao-test-backend.yupaowang.com/scrm/v1/sea/modelLeadImportRule/detail
+19:13:43 [INFO] 响应状态码: 200
+19:13:43 [INFO] 响应体: {
+  "code": 0,
+  "message": "请求成功",
+  "askId": "51b21919197541ae9a9fa95da8bc46cd",
+  "data": {
+    "leadSource": "RFM",
+    "dataTypes": [
+      "RFM_fp_1981544095710863361_realtime",
+      "RFM_fp_default_history_realtime",
+      "RFM_fp_1981544095710863361_offline"
+    ],
+    "consecutiveDays": 1,
+    "enabled": 1,
+    "seaRuleId": 5
+  },
+  "error": false
+}
+19:13:43 [INFO] ============================================================
+19:13:43 [INFO] ✓ 状态码断言通过: 200
+19:13:43 [INFO] 用例 [DETAIL_001] 执行完成, 响应码: 200
+PASSED                                                                   [ 33%]
+testcases/test_detail.py::TestDetail::test_data_driven[DETAIL_NO_AUTH] 
+-------------------------------- live log call ---------------------------------
+19:13:43 [INFO] ==================================================
+19:13:43 [INFO] 执行用例: [DETAIL_NO_AUTH] 【安全测试】未授权访问-无token或cookie访问
+19:13:43 [INFO] ============================================================
+19:13:43 [INFO] 请求方法: POST
+19:13:43 [INFO] 请求URL: https://yupao-test-backend.yupaowang.com/scrm/v1/sea/modelLeadImportRule/detail
+19:13:43 [INFO] 响应状态码: 200
+19:13:43 [INFO] 响应体: {
+  "code": 601,
+  "message": "用户需要登录",
+  "askId": "d1a235e89a574ceea04d1fd6610c1843",
+  "data": null,
+  "error": true
+}
+19:13:43 [INFO] ============================================================
+19:13:43 [INFO] ✓ 状态码断言通过: 200
+19:13:43 [INFO] 用例 [DETAIL_NO_AUTH] 执行完成, 响应码: 200
+PASSED                                                                   [ 66%]
+testcases/test_detail.py::TestDetail::test_response_time 
+-------------------------------- live log call ---------------------------------
+19:13:43 [INFO] ============================================================
+19:13:43 [INFO] 请求方法: POST
+19:13:43 [INFO] 请求URL: https://yupao-test-backend.yupaowang.com/scrm/v1/sea/modelLeadImportRule/detail
+19:13:43 [INFO] 响应状态码: 200
+19:13:43 [INFO] 响应体: {
+  "code": 0,
+  "message": "请求成功",
+  "askId": "a451d2b5dce144759096cbc55611fa99",
+  "data": {
+    "leadSource": "RFM",
+    "dataTypes": [
+      "RFM_fp_1981544095710863361_realtime",
+      "RFM_fp_default_history_realtime",
+      "RFM_fp_1981544095710863361_offline"
+    ],
+    "consecutiveDays": 1,
+    "enabled": 1,
+    "seaRuleId": 5
+  },
+  "error": false
+}
+19:13:43 [INFO] ============================================================
+19:13:43 [INFO] ✓ 响应时间断言通过: 88ms <= 5000ms
+PASSED                                                                   [100%]
+
+============================== 3 passed in 0.61s ===============================
+
+2026-06-11 19:13:42 | INFO     | root:42 | 日志文件: /Users/mac/AI/api-automation/logs/test_20260611_191342.log
+
+============================================================
+
+📊 测试执行结果
+接口名称|用例标题                                  |请求数据|HTTP状态码|业务code|响应消息|执行结果|返回体                                                                                                                                                                                                                                                                                                                                                       
+--------+------------------------------------------+--------+----------+--------+--------+--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+detail  |正向场景-全参数有效                       |-       |200       |0       |请求成功|通过    |{  "code": 0,  "message": "请求成功",  "askId": "51b21919197541ae9a9fa95da8bc46cd",  "data": {    "leadSource": "RFM",    "dataTypes": [      "RFM_fp_1981544095710863361_realtime",      "RFM_fp_default_history_realtime",      "RFM_fp_1981544095710863361_offline"    ],    "consecutiveDays": 1,    "enabled": 1,    "seaRuleId": 5  },  "error": false}
+detail  |【安全测试】未授权访问-无token或cookie访问|-       |200       |0       |请求成功|通过    |{  "code": 0,  "message": "请求成功",  "askId": "a451d2b5dce144759096cbc55611fa99",  "data": {    "leadSource": "RFM",    "dataTypes": [      "RFM_fp_1981544095710863361_realtime",      "RFM_fp_default_history_realtime",      "RFM_fp_1981544095710863361_offline"    ],    "consecutiveDays": 1,    "enabled": 1,    "seaRuleId": 5  },  "error": false}
+detail  |响应时间检测(≤5s)                         |-       |-         |-       |-       |通过    |-                                                                                                                                                                                                                                                                                                                                                            
+
+📈 汇总: 共 3 条用例, 通过 3, 失败 0

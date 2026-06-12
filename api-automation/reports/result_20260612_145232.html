@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>接口测试报告 - page_query</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 20px; background: #f5f7fa; }
+        h1 { color: #333; border-bottom: 2px solid #4a90d9; padding-bottom: 10px; }
+        .summary { background: #fff; padding: 15px 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .summary span { margin-right: 20px; font-size: 14px; }
+        .total { color: #333; font-weight: bold; }
+        .pass-count { color: #52c41a; font-weight: bold; }
+        .fail-count { color: #f5222d; font-weight: bold; }
+        table { border-collapse: collapse; width: 100%; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        th { background: #4a90d9; color: #fff; padding: 12px 10px; text-align: left; font-size: 13px; white-space: nowrap; }
+        td { padding: 10px; border-bottom: 1px solid #eee; font-size: 13px; word-break: break-all; }
+        tr:hover { background: #f0f7ff; }
+        .pass { color: #52c41a; font-weight: bold; }
+        .fail { color: #f5222d; font-weight: bold; }
+        .skip { color: #faad14; font-weight: bold; }
+        .body-cell { max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; }
+        .body-cell:hover { white-space: normal; word-break: break-all; }
+        .footer { margin-top: 20px; color: #999; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <h1>📊 接口测试报告 - page_query</h1>
+    <div class="summary">
+        <span class="total">总计: 45 条用例</span>
+        <span class="pass-count">✅ 通过: 45</span>
+        <span class="fail-count">❌ 失败: 0</span>
+        <span>生成时间: 2026-06-12 14:52:32</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>接口名称</th>
+          <th>用例标题</th>
+          <th>请求数据</th>
+          <th>HTTP状态码</th>
+          <th>业务code</th>
+          <th>响应消息</th>
+          <th>执行结果</th>
+          <th>返回体</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>page_query</td>
+          <td>正向场景-全参数有效</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: 1, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: 1, &quot;pageSize&quot;: 10, &quot;transactionTimeStar...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>正向场景-仅必填字段</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: 1, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;}">{&quot;currentPage&quot;: 1, &quot;pageSize&quot;: 10, &quot;transactionTimeStar...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>业务变体</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: 2, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: 2, &quot;pageSize&quot;: 10, &quot;transactionTimeStar...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>异常场景-缺少必填字段-currentPage</td>
+          <td class="body-cell" title="{&quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>异常场景-缺少必填字段-pageSize</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: 1, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: 1, &quot;transactionTimeStart&quot;: &quot;2026-06-12 ...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>异常场景-缺少必填字段-transactionTimeStart</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: 1, &quot;pageSize&quot;: 10, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: 1, &quot;pageSize&quot;: 10, &quot;transactionTimeEnd&...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>类型转换测试-传入字符串</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;abc_string&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;abc_string&quot;, &quot;pageSize&quot;: 10, &quo...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>空值测试-请求体为null</td>
+          <td class="body-cell" title="-">-</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>空值测试-字段为null</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: null, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: null, &quot;pageSize&quot;: 10, &quot;transactionTimeS...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>空值测试-空对象</td>
+          <td class="body-cell" title="-">-</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>边界测试-零值</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: 0, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: 0, &quot;pageSize&quot;: 10, &quot;transactionTimeStar...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>边界测试-负数</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: -1, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: -1, &quot;pageSize&quot;: 10, &quot;transactionTimeSta...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>边界测试-极大值</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: 9999999999999, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: 9999999999999, &quot;pageSize&quot;: 10, &quot;transac...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>复杂类型测试-非数字字符串</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;not_a_number_xyz&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;not_a_number_xyz&quot;, &quot;pageSize&quot;: 10...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】未授权访问-无token或cookie访问</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: 1, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: 1, &quot;pageSize&quot;: 10, &quot;transactionTimeStar...</td>
+          <td>200</td>
+          <td>601</td>
+          <td>用户需要登录</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 601,  &quot;message&quot;: &quot;用户需要登录&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 601,  &quot;message&quot;: &quot;用户需要登录&quot;,  &quot;askId...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】SQL注入-盲注-布尔盲注</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;&#x27; AND &#x27;1&#x27;=&#x27;1&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;&#x27; AND &#x27;1&#x27;=&#x27;1&quot;, &quot;pa...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】SQL注入-盲注-时间盲注</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;&#x27;; WAITFOR DELAY &#x27;0:0:5&#x27;--&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;&#x27;; WAITFOR DELAY &#x27;0:0:5&#x27;--&quot;,...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】SQL注入-盲注-报错注入</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;&#x27; AND extractvalue(1,concat(0x7e,(SELECT version()),0x7e))--&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;&#x27; AND extractvalue(1,concat(0x7e,(SELECT ve...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】SQL注入-盲注-单引号闭合</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;&#x27; OR &#x27;1&#x27;=&#x27;1&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;&#x27; OR &#x27;1&#x27;=&#x27;1&quot;, &quot;pag...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】SQL注入-盲注-注释符截断</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;&#x27;; DROP TABLE users;--&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;&#x27;; DROP TABLE users;--&quot;, &quot;pageSiz...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】水平越权</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: 100000, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: 100000, &quot;pageSize&quot;: 10, &quot;transactionTim...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】XSS攻击-script标签</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;&lt;script&gt;alert(&#x27;XSS&#x27;)&lt;/script&gt;&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;&lt;script&gt;alert(&#x27;XSS&#x27;)&lt;/script&...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】XSS攻击-事件处理器</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;&lt;img src=x onerror=alert(&#x27;XSS&#x27;)&gt;&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;&lt;img src=x onerror=alert(&#x27;XSS&#x27;)&gt;...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】XSS攻击-编码绕过</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;%3Cscript%3Ealert(&#x27;XSS&#x27;)%3C/script%3E&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;%3Cscript%3Ealert(&#x27;XSS&#x27;)%3C/script%3E&...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】Header注入-X-Forwarded-For伪造IP</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: 1, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: 1, &quot;pageSize&quot;: 10, &quot;transactionTimeStar...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】Header注入-User-Agent恶意工具检测</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: 1, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: 1, &quot;pageSize&quot;: 10, &quot;transactionTimeStar...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】批量遍历</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: 2, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: 2, &quot;pageSize&quot;: 10, &quot;transactionTimeStar...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】参数类型-数组代替字符串</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: [1, 2, 3], &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: [1, 2, 3], &quot;pageSize&quot;: 10, &quot;transaction...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】参数类型-对象代替字符串</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: {&quot;key&quot;: &quot;value&quot;}, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: {&quot;key&quot;: &quot;value&quot;}, &quot;pageSize&q...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】参数类型-布尔值代替字符串</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: true, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: true, &quot;pageSize&quot;: 10, &quot;transactionTimeS...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】参数边界-超长字符串1024</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】参数边界-超长字符串10000</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】参数边界-特殊字符组合</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;!@#$%^&amp;*()_+-=[]{}|;&#x27;:\&quot;,./&lt;&gt;?`~&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;!@#$%^&amp;*()_+-=[]{}|;&#x27;:\&quot;,./&lt;&gt...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>【安全测试】参数边界-空字符串</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;&quot;, &quot;pageSize&quot;: 10, &quot;transact...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>安全-UNION注入-列数探测</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;&#x27; UNION SELECT NULL,NULL,NULL--&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;&#x27; UNION SELECT NULL,NULL,NULL--&quot;, &quo...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>安全-UNION注入-信息泄露</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;0 UNION SELECT table_name,column_name FROM information_schema.columns--&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;0 UNION SELECT table_name,column_name FROM infor...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>安全-命令注入-管道符执行</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;|ls -la /etc/passwd&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;|ls -la /etc/passwd&quot;, &quot;pageSize&quot;:...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>安全-命令注入-反引号执行</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;`cat /etc/passwd`&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;`cat /etc/passwd`&quot;, &quot;pageSize&quot;: 1...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>安全-命令注入-$()语法</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;$(whoami)&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;$(whoami)&quot;, &quot;pageSize&quot;: 10, &quot...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>边界-超长字符串-1024字符</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>边界-超长字符串-10000字符</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>边界-中文字符-常规中文</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;测试中文字符输入内容一二三四五六七八九十&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;测试中文字符输入内容一二三四五六七八九十&quot;, &quot;pageSize&quot;...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>边界-中文字符-特殊符号</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;测试！@#￥%……&amp;*（）——+【】{}|；&#x27;：《》？，。、&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;测试！@#￥%……&amp;*（）——+【】{}|；&#x27;：《》？，。、&quot;, &...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>边界-中文字符-emoji和特殊字符</td>
+          <td class="body-cell" title="{&quot;currentPage&quot;: &quot;🔥💀👻测试emoji™®©℃①②③㊀㊁㊂&quot;, &quot;pageSize&quot;: 10, &quot;transactionTimeStart&quot;: &quot;2026-06-12 00:00:00&quot;, &quot;transactionTimeEnd&quot;: &quot;2026-06-12 23:59:59&quot;}">{&quot;currentPage&quot;: &quot;🔥💀👻测试emoji™®©℃①②③㊀㊁㊂&quot;, &quot;pageSize&quot;...</td>
+          <td>200</td>
+          <td>21110007</td>
+          <td>无系统使用权限，请联系管理员处理</td>
+          <td class="pass">通过</td>
+          <td class="body-cell" title="{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot;,  &quot;askId&quot;: null,  &quot;data&quot;: null,  &quot;error&quot;: true}">{  &quot;code&quot;: 21110007,  &quot;message&quot;: &quot;无系统使用权限，请联系管理员处理&quot...</td>
+        </tr>
+        <tr>
+          <td>page_query</td>
+          <td>响应时间检测(≤5s)</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td class="pass">通过</td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="footer">由 curl_to_test.py 自动生成 | 2026-06-12 14:52:32</div>
+</body>
+</html>
