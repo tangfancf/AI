@@ -967,6 +967,125 @@ def _truncate(text: str, max_len: int = 0) -> str:
     return text[: max_len - 3] + "..."
 
 
+def build_xlsx_report(api_info: Dict[str, str], cases: List[Dict], test_results: Dict[str, str],
+                      response_details: Optional[Dict[str, Dict[str, str]]] = None) -> str:
+    """
+    生成 Excel (.xlsx) 报告文件，返回文件路径。
+    """
+    from openpyxl import Workbook
+    from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+
+    api_name = api_info["api_name"]
+    reports_dir = BASE_DIR / "reports"
+    reports_dir.mkdir(exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    xlsx_path = reports_dir / f"result_{timestamp}.xlsx"
+
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "测试结果"
+
+    # 表头
+    headers_row = ["接口名称", "用例标题", "请求数据", "HTTP状态码", "业务code", "响应消息", "执行结果", "返回体"]
+    ws.append(headers_row)
+
+    # 表头样式
+    header_font = Font(bold=True, color="FFFFFF", size=11)
+    header_fill = PatternFill(start_color="4A90D9", end_color="4A90D9", fill_type="solid")
+    thin_border = Border(
+        left=Side(style="thin"),
+        right=Side(style="thin"),
+        top=Side(style="thin"),
+        bottom=Side(style="thin"),
+    )
+    for col_idx, _ in enumerate(headers_row, 1):
+        cell = ws.cell(row=1, column=col_idx)
+        cell.font = header_font
+        cell.fill = header_fill
+        cell.alignment = Alignment(horizontal="center", vertical="center")
+        cell.border = thin_border
+
+    # 结果颜色
+    pass_font = Font(color="389E0D", bold=True)
+    fail_font = Font(color="CF1322", bold=True)
+
+    passed_count = 0
+    failed_count = 0
+
+    for case in cases:
+        case_id = case["case_id"]
+        title = case["title"]
+        body = case.get("body")
+        if body and isinstance(body, dict) and body:
+            body_str = json.dumps(body, ensure_ascii=False)
+        else:
+            body_str = "-"
+
+        result_status = test_results.get(case_id, "UNKNOWN")
+        if result_status == "PASSED":
+            result_display = "通过"
+            passed_count += 1
+        elif result_status == "FAILED":
+            result_display = "失败"
+            failed_count += 1
+        elif result_status == "ERROR":
+            result_display = "错误"
+            failed_count += 1
+        elif result_status == "SKIPPED":
+            result_display = "跳过"
+        else:
+            result_display = "未知"
+
+        detail = (response_details or {}).get(case_id, {})
+        http_status = detail.get("http_status", "-")
+        biz_code = detail.get("biz_code", "-")
+        message = detail.get("message", "-") or "-"
+        response_body = detail.get("response_body", "-") or "-"
+        response_body = response_body.replace("\n", "").replace("\r", "")
+
+        row = [api_name, title, body_str, http_status, biz_code, message, result_display, response_body]
+        ws.append(row)
+
+        # 给执行结果列加颜色
+        row_idx = ws.max_row
+        result_cell = ws.cell(row=row_idx, column=7)
+        if result_display == "通过":
+            result_cell.font = pass_font
+        elif result_display in ("失败", "错误"):
+            result_cell.font = fail_font
+
+    # 响应时间行
+    rt_status = test_results.get("__response_time__", "UNKNOWN")
+    rt_display = "通过" if rt_status == "PASSED" else ("失败" if rt_status == "FAILED" else "未知")
+    if rt_status == "PASSED":
+        passed_count += 1
+    elif rt_status == "FAILED":
+        failed_count += 1
+    ws.append([api_name, "响应时间检测(≤5s)", "-", "-", "-", "-", rt_display, "-"])
+    result_cell = ws.cell(row=ws.max_row, column=7)
+    if rt_display == "通过":
+        result_cell.font = pass_font
+    elif rt_display == "失败":
+        result_cell.font = fail_font
+
+    # 设置列宽
+    col_widths = [14, 36, 50, 12, 10, 24, 10, 60]
+    for i, w in enumerate(col_widths, 1):
+        ws.column_dimensions[ws.cell(row=1, column=i).column_letter].width = w
+
+    # 添加汇总 sheet
+    ws_summary = wb.create_sheet("汇总")
+    total = passed_count + failed_count
+    ws_summary.append(["总用例数", total])
+    ws_summary.append(["通过", passed_count])
+    ws_summary.append(["失败", failed_count])
+    ws_summary.append(["通过率", f"{passed_count / total * 100:.1f}%" if total > 0 else "N/A"])
+    ws_summary.append(["生成时间", datetime.now().strftime("%Y-%m-%d %H:%M:%S")])
+
+    wb.save(str(xlsx_path))
+    return str(xlsx_path)
+
+
 def build_result_table(api_name: str, cases: List[Dict], test_results: Dict[str, str],
                        response_details: Optional[Dict[str, Dict[str, str]]] = None) -> str:
     """
@@ -1220,7 +1339,10 @@ def main():
                 f.write(table_text)
                 f.write("\n")
 
+        # 生成 xlsx 报告
+        xlsx_path = build_xlsx_report(api_info, cases, test_results, response_details)
         print(f"\n📁 测试报告: {report_path}")
+        print(f"📊 Excel报告: {xlsx_path}")
 
         if returncode == 0:
             print(f"✅ 全部测试通过!")
@@ -1235,6 +1357,7 @@ def main():
     print(f"   测试用例: testcases/test_{api_info['api_name']}.py")
     if not args.no_run:
         print(f"   测试报告: {report_path}")
+        print(f"   Excel报告: {xlsx_path}")
     print(f"{'=' * 60}\n")
 
 

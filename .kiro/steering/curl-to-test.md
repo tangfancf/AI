@@ -1,5 +1,5 @@
 ---
-name: cURL转接口自动化测试
+name: curl-to-test
 inclusion: manual
 ---
 
